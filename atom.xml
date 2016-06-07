@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tang-yue.github.io/"/>
-  <updated>2016-06-07T04:09:43.474Z</updated>
+  <updated>2016-06-07T04:20:08.695Z</updated>
   <id>http://tang-yue.github.io/</id>
   
   <author>
@@ -20,15 +20,16 @@
     <link href="http://tang-yue.github.io/2016/06/05/my-page/"/>
     <id>http://tang-yue.github.io/2016/06/05/my-page/</id>
     <published>2016-06-05T11:25:43.000Z</published>
-    <updated>2016-06-07T04:09:43.474Z</updated>
+    <updated>2016-06-07T04:20:08.695Z</updated>
     
     <content type="html">&lt;h3 id=&quot;这是一个标题&quot;&gt;&lt;a href=&quot;#这是一个标题&quot; class=&quot;headerlink&quot; title=&quot;这是一个标题&quot;&gt;&lt;/a&gt;这是一个标题&lt;/h3&gt;&lt;p&gt;我只是来测试一下&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;苹果&lt;/li&gt;
 &lt;li&gt;香蕉&lt;/li&gt;
-&lt;li&gt;菠萝&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;菠萝&lt;br&gt;#这是一个代码区域：&lt;/p&gt;
+&lt;p&gt;  &lt;/p&gt;&lt;p&gt;我来测试&lt;/p&gt;&lt;br&gt;  &lt;h1&gt;&lt;/h1&gt;&lt;br&gt;  &lt;img&gt;&lt;br&gt;代码块结束。    &lt;p&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;这是一个代码区域&lt;br&gt;    &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;br&gt;    &lt;h1&gt;&lt;/h1&gt;&lt;br&gt;    &lt;img&gt;&lt;br&gt;代码块结束。    &lt;p&gt;&lt;/p&gt;
 &lt;hr&gt;
 </content>
     
@@ -38,8 +39,7 @@
 &lt;ul&gt;
 &lt;li&gt;苹果&lt;/li&gt;
 &lt;li&gt;香蕉&lt;/li&gt;
-&lt;li&gt;菠萝&lt;/li&gt;
-
+&lt;li&gt;&lt;p&gt;菠萝&lt;br
     
     </summary>
     
