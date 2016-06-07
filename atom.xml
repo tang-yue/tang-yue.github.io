@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tang-yue.github.io/"/>
-  <updated>2016-06-07T01:45:11.576Z</updated>
+  <updated>2016-06-07T02:12:04.610Z</updated>
   <id>http://tang-yue.github.io/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://tang-yue.github.io/2016/06/07/test/"/>
+    <id>http://tang-yue.github.io/2016/06/07/test/</id>
+    <published>2016-06-07T02:05:14.272Z</published>
+    <updated>2016-06-07T02:12:04.610Z</updated>
+    
+    <content type="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;UTF-8&quot;&gt;
+	&lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;h6&gt;关于我&lt;/h6&gt;
+	&lt;p&gt;我最常吃的是食物是面包，和苹果。目前正在自学前端。业余爱好，看电影，音乐，看书，画画，游泳，但是后两项没有目前没有时间去折腾。&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;UTF-8&quot;&gt;
+	&lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;h6&gt;关于我&lt;/h6&gt;
+	&lt;p&gt;我最常吃的是食物是面包，和苹果。目前
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>my page</title>
