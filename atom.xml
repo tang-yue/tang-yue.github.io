@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tang-yue.github.io/"/>
-  <updated>2016-06-07T10:54:24.914Z</updated>
+  <updated>2016-06-08T05:42:06.956Z</updated>
   <id>http://tang-yue.github.io/</id>
   
   <author>
@@ -14,6 +14,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mybolg</title>
+    <link href="http://tang-yue.github.io/2016/06/08/mybolg/"/>
+    <id>http://tang-yue.github.io/2016/06/08/mybolg/</id>
+    <published>2016-06-08T05:42:06.000Z</published>
+    <updated>2016-06-08T05:42:06.956Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>my page</title>
