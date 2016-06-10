@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tang-yue.github.io/"/>
-  <updated>2016-06-09T11:54:04.896Z</updated>
+  <updated>2016-06-10T02:01:24.561Z</updated>
   <id>http://tang-yue.github.io/</id>
   
   <author>
@@ -16,11 +16,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>4月28日至6月9日学习前端记录过程</title>
+    <link href="http://tang-yue.github.io/2016/06/09/2016-6-9/"/>
+    <id>http://tang-yue.github.io/2016/06/09/2016-6-9/</id>
+    <published>2016-06-09T13:07:53.000Z</published>
+    <updated>2016-06-10T02:01:24.561Z</updated>
+    
+    <content type="html">&lt;p&gt;4月28号到5月1号上午。&lt;br&gt;第五天学习。&lt;br&gt;w3school学到布局这一节。慕课网上，把html和css过掉了。headfirst看到200页。&lt;/p&gt;
+&lt;p&gt;5月3日&lt;br&gt;head first看到466页。&lt;/p&gt;
+&lt;p&gt;5月4日&lt;br&gt;18：10时间过的真快。今天上午装个软件，还没装上，它的名字就是sublime插件emment装不上。内心极尽崩溃。对像雾一样的布局有了些了解。这是下午做的事，看了慕课网的网页布局视频。&lt;/p&gt;
+&lt;p&gt;5月6号&lt;br&gt;15:50&lt;br&gt;从5月4号，开始看激光原理。激光原理已经考完，下午在看headfist。&lt;/p&gt;
+&lt;p&gt;5月13号&lt;br&gt;5月11号开始JavaScript学习，目前在刷w3school。已刷到dom部分。进程很缓慢。&lt;/p&gt;
+&lt;p&gt;5月18日至5月30日&lt;br&gt;看智能社的javascript的视频。并跟着写代码，关掉电脑，自己再写一遍，回忆思路。做些小效果，如模仿鼠标提示框，选项卡，邮箱的反选，全选，不选，以及简易日历。这些我会整理下的。期间出现最多的就是查找代码错误。写好代码，不知道哪里错了，而自己感觉是对的。于是一遍又一遍的查找，孤立无援，这种感觉我相信我会适应的。&lt;/p&gt;
+&lt;p&gt;5月31日&lt;br&gt;今天注册了几乎一天的gmail，最后还是不行，最后手机号验证，一直显示该手机号无法验证，试了很多手机号。。关于搭建博客，博客刚有了站点，但是主题还没有选，以及一些文件究竟是什么，该如何管理博文，一头雾水。&lt;/p&gt;
+&lt;p&gt;6月1号&lt;br&gt;搭建博客，翻墙谷歌，上YouTube，搜一些国外网站，搜资源。第一次翻墙，心情还是有点激动。&lt;/p&gt;
+&lt;p&gt;6月4号&lt;br&gt;三天总结&lt;br&gt;智能社视频看到9节&lt;br&gt;js高级程序设计看到第五章，5.6基本包装类型。&lt;br&gt;js DOM编程艺术看到205页。除此之外，github上的百度前端学院的春季任务task 00001已经完成，里面包含7个小任务。具体我会整理下的。&lt;/p&gt;
+&lt;p&gt;6月7号&lt;br&gt;最后暂时确定主题为random，搜了些主题，还是这款更喜欢。所有配置已经完成。以及知道怎么写博客了。&lt;/p&gt;
+&lt;p&gt;6月8，9号&lt;br&gt;在折腾如何将博客上的文件上传到七牛云储存。期间最大的问题就是conf.json的路径出现问题，相对路径，绝对路径都试过了但是还是不行，用命令行上传文件。目前已经在segmentfault上提问。&lt;/p&gt;
+&lt;p&gt;上述编辑于2016年6月10日10:01&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;4月28号到5月1号上午。&lt;br&gt;第五天学习。&lt;br&gt;w3school学到布局这一节。慕课网上，把html和css过掉了。headfirst看到200页。&lt;/p&gt;
+&lt;p&gt;5月3日&lt;br&gt;head first看到466页。&lt;/p&gt;
+&lt;p&gt;5月4日&lt;br&gt;18：10时间过的真快
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>我为什么学前端</title>
     <link href="http://tang-yue.github.io/2016/06/05/my-page/"/>
     <id>http://tang-yue.github.io/2016/06/05/my-page/</id>
     <published>2016-06-05T11:25:43.000Z</published>
-    <updated>2016-06-09T11:54:04.896Z</updated>
+    <updated>2016-06-09T13:02:10.923Z</updated>
     
     <content type="html">&lt;p&gt;关于我为什么学习前端，我在脑袋想了很多答案。三年，徐州工程学院电子科学与技术专业。我自己的专业实在是没有学习到什么东西，几乎是一片空白。你可以说是因为我没有认真学，所以才会连本专业基础的知识点都不知道。我无法辩驳，我做不到，去认真学我的本专业。&lt;/p&gt;
 &lt;p&gt;三年，我该如何叙述我的三年。前1年半的时间，我的确是不知道我做了些什么。后一年半，可以受我哥哥一部分的影响，告诉我现在真的不是我可以什么都记不得年纪，也不是我的每一天都过得毫无变化的年纪，最重要的是努力，勤奋。在这个经历过高考之后，总会一身的懒散。而殊不知对于我来说，真正对这个世界的认知才刚刚开始。我没有认识到，我为那时自己的狭隘愚昧而难过。&lt;/p&gt;
