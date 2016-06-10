@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tang-yue.github.io/"/>
-  <updated>2016-06-10T02:24:40.695Z</updated>
+  <updated>2016-06-10T02:38:47.213Z</updated>
   <id>http://tang-yue.github.io/</id>
   
   <author>
@@ -14,6 +14,69 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>简易日历之列表布局</title>
+    <link href="http://tang-yue.github.io/2016/06/10/2016-6-10/"/>
+    <id>http://tang-yue.github.io/2016/06/10/2016-6-10/</id>
+    <published>2016-06-10T02:32:59.000Z</published>
+    <updated>2016-06-10T02:38:47.213Z</updated>
+    
+    <content type="html">&lt;p&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;html lang=&quot;en&quot;&gt;&lt;/html&gt;&lt;/p&gt;
+&lt;p&gt;&lt;head&gt;&lt;br&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;&lt;br&gt;    &lt;title&gt;Document&lt;/title&gt;&lt;br&gt;    &lt;style&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; #tab{ width:240px;
+      border:1px solid gray;
+     margin:0 auto;
+     padding:15px 15px 10px 15px;
+
+     background:#D8D8D8;
+     }
+   ul{margin:0;
+      padding:0;
+       }
+ li{list-style:none;
+    /*border:1px solid black;*/
+     background:black;
+     width:70px;
+    /*难道宽设置仅仅是靠眼睛看着差不多去设置的吗？*/
+    float:left;
+    margin:5px;
+     color:white;
+     text-align:center;
+     }
+ #text{clear:both;
+        width:230px;
+       border:1px solid white;
+       background:#F0F0F0;
+       position:relative;
+       left:5px;
+        margin-top:30px;
+        /*这个语句为什么会没有任何反应呢。*/
+    }
+    .active{color:red;background:white;}
+
+&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;/head&gt;&lt;/p&gt;
+&lt;p&gt;&lt;body&gt;&lt;/p&gt;
+&lt;div id=&quot;tab&quot; class=&quot;calendar&quot;&gt;&lt;br&gt;    &lt;ul&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;1&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;2&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;3&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;4&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;5&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;6&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;7&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;8&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;9&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;10&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;11&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li class=&quot;active&quot;&gt;&lt;h2&gt;12&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;     &lt;/ul&gt;&lt;br&gt;    &lt;div id=&quot;text&quot;&gt;&lt;br&gt;         &lt;h2&gt;一月的活动&lt;/h2&gt;&lt;br&gt;         &lt;p&gt;我要把智能社的视频再复习下，把写过的代码再重新写下。&lt;/p&gt;&lt;br&gt;    &lt;/div&gt;&lt;br&gt;    &lt;/div&gt;
+
+&lt;p&gt;&lt;/body&gt;&lt;br&gt;&lt;/html&gt;&lt;br&gt;&lt;!-- 还是不会用列表进行布局，关键点就是我无法让三个li水平显示，形成四行三列的布局。 我觉得这里肯定要用到布局里浮动的有关知识，而这些掌握的并不牢靠。
+遇到的问题，无法更改ul和下一个div，即id为text的这个div，之间的间距。主要是有点小了，不过大致上还是布局出来了。灵感来源于gitbub百度前端作业1里任务六。--&gt;&lt;/p&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;/p&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;html lang=&quot;en&quot;&gt;&lt;/html&gt;&lt;/p&gt;
+&lt;p&gt;&lt;head&gt;&lt;br&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;&lt;br&gt;    &lt;title&gt;Document&lt;/title&gt;&lt;br&gt;    &lt;s
+    
+    </summary>
+    
+      <category term="编程技术" scheme="http://tang-yue.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>4月28日至6月9日学习前端记录过程</title>
