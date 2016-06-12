@@ -17,8 +17,8 @@
   
   <entry>
     <title>hellow</title>
-    <link href="http://tang-yue.github.io/2016/06/12/hellow/"/>
-    <id>http://tang-yue.github.io/2016/06/12/hellow/</id>
+    <link href="http://tang-yue.github.io/2016/06/12/20160612/"/>
+    <id>http://tang-yue.github.io/2016/06/12/20160612/</id>
     <published>2016-06-12T07:03:34.000Z</published>
     <updated>2016-06-12T07:04:50.231Z</updated>
     
@@ -37,12 +37,12 @@
   
   <entry>
     <title>简易日历之列表布局</title>
-    <link href="http://tang-yue.github.io/2016/06/10/2016610/"/>
-    <id>http://tang-yue.github.io/2016/06/10/2016610/</id>
+    <link href="http://tang-yue.github.io/2016/06/10/20160610/"/>
+    <id>http://tang-yue.github.io/2016/06/10/20160610/</id>
     <published>2016-06-10T02:32:59.000Z</published>
-    <updated>2016-06-10T02:46:30.842Z</updated>
+    <updated>2016-06-12T14:22:03.608Z</updated>
     
-    <content type="html">&lt;p&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;‘&amp;lt;!DOCTYPE html&amp;gt;&lt;/p&gt;
 &lt;p&gt;&lt;html lang=&quot;en&quot;&gt;&lt;/html&gt;&lt;/p&gt;
 &lt;p&gt;&lt;head&gt;&lt;br&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;&lt;br&gt;    &lt;title&gt;Document&lt;/title&gt;&lt;br&gt;    &lt;style&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt; #tab{ width:240px;
@@ -82,14 +82,14 @@
 &lt;div id=&quot;tab&quot; class=&quot;calendar&quot;&gt;&lt;br&gt;    &lt;ul&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;1&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;2&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;3&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;4&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;5&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;6&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;7&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;8&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;9&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;10&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li&gt;&lt;h2&gt;11&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;        &lt;li class=&quot;active&quot;&gt;&lt;h2&gt;12&lt;/h2&gt;&lt;p&gt;JAN&lt;/p&gt;&lt;/li&gt;&lt;br&gt;     &lt;/ul&gt;&lt;br&gt;    &lt;div id=&quot;text&quot;&gt;&lt;br&gt;         &lt;h2&gt;一月的活动&lt;/h2&gt;&lt;br&gt;         &lt;p&gt;我要把智能社的视频再复习下，把写过的代码再重新写下。&lt;/p&gt;&lt;br&gt;    &lt;/div&gt;&lt;br&gt;    &lt;/div&gt;
 
 &lt;p&gt;&lt;/body&gt;&lt;br&gt;&lt;/html&gt;&lt;br&gt;&lt;!-- 还是不会用列表进行布局，关键点就是我无法让三个li水平显示，形成四行三列的布局。 我觉得这里肯定要用到布局里浮动的有关知识，而这些掌握的并不牢靠。
-遇到的问题，无法更改ul和下一个div，即id为text的这个div，之间的间距。主要是有点小了，不过大致上还是布局出来了。灵感来源于gitbub百度前端作业1里任务六。--&gt;&lt;/p&gt;
+遇到的问题，无法更改ul和下一个div，即id为text的这个div，之间的间距。主要是有点小了，不过大致上还是布局出来了。灵感来源于gitbub百度前端作业1里任务六。--&gt;‘&lt;/p&gt;
 &lt;/style&gt;&lt;/head&gt;&lt;/p&gt;</content>
     
     <summary type="html">
     
-      &lt;p&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/p&gt;
+      &lt;p&gt;‘&amp;lt;!DOCTYPE html&amp;gt;&lt;/p&gt;
 &lt;p&gt;&lt;html lang=&quot;en&quot;&gt;&lt;/html&gt;&lt;/p&gt;
-&lt;p&gt;&lt;head&gt;&lt;br&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;&lt;br&gt;    &lt;title&gt;Document&lt;/title&gt;&lt;br&gt;    &lt;s
+&lt;p&gt;&lt;head&gt;&lt;br&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;&lt;br&gt;    &lt;title&gt;Document&lt;/title&gt;&lt;br&gt;    &lt;
     
     </summary>
     
@@ -100,8 +100,8 @@
   
   <entry>
     <title>4月28日至6月9日学习前端记录过程</title>
-    <link href="http://tang-yue.github.io/2016/06/09/201669/"/>
-    <id>http://tang-yue.github.io/2016/06/09/201669/</id>
+    <link href="http://tang-yue.github.io/2016/06/09/20160609/"/>
+    <id>http://tang-yue.github.io/2016/06/09/20160609/</id>
     <published>2016-06-09T13:07:53.000Z</published>
     <updated>2016-06-10T02:24:40.695Z</updated>
     
@@ -132,8 +132,8 @@
   
   <entry>
     <title>我为什么学前端</title>
-    <link href="http://tang-yue.github.io/2016/06/05/mypage/"/>
-    <id>http://tang-yue.github.io/2016/06/05/mypage/</id>
+    <link href="http://tang-yue.github.io/2016/06/05/20160608/"/>
+    <id>http://tang-yue.github.io/2016/06/05/20160608/</id>
     <published>2016-06-05T11:25:43.000Z</published>
     <updated>2016-06-09T13:02:10.923Z</updated>
     
@@ -160,8 +160,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://tang-yue.github.io/2016/05/29/helloworld/"/>
-    <id>http://tang-yue.github.io/2016/05/29/helloworld/</id>
+    <link href="http://tang-yue.github.io/2016/05/29/20160607/"/>
+    <id>http://tang-yue.github.io/2016/05/29/20160607/</id>
     <published>2016-05-29T13:30:47.171Z</published>
     <updated>2016-06-07T02:18:35.563Z</updated>
     

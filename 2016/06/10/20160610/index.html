@@ -2,8 +2,6 @@
 
 
 
-  
-
 
 
 
@@ -18,9 +16,20 @@
   
   
   
-    <meta name="description" content="后来很多人问我一个人夜晚踟蹰路上的心情，我想起的却不是孤单与路长，而是波澜壮阔的海和天空中闪耀的星光。">
+    <meta name="description" content="‘&lt;!DOCTYPE html&gt;
+
+        Document    
+ #tab{ width:240px;
+      border:1px solid gray;
+     margin:0 auto;
+     padding:15px 15px 10px 15px;
+
+     background:#D8D8D8;
+     }
+   ul{margin:0;
+...">
   
-  <title>分类: 编程日志 [ 醉眼天涯 ]</title>
+  <title>简易日历之列表布局 [ 醉眼天涯 ]</title>
   
     <link rel="alternate" href="/atom.xml" title="醉眼天涯">
   
@@ -41,6 +50,24 @@
 <body>
 <div class="side-navigate hide-area">
   
+    <div class="item prev">
+      <a href="/2016/06/12/20160612/">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        hellow
+      </div>
+    </div>
+  
+  
+    <div class="item next">
+      <a href="/2016/06/09/20160609/">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        4月28日至6月9日学习前端记录过程
+      </div>
+    </div>
   
 </div>
 <div id="container" class="hide-area">
@@ -78,94 +105,86 @@
     <div id="content-inner">
       
       
-  <article id="page">
-    
+  <article id="post">
+    <h1>简易日历之列表布局</h1>
+    <p class="page-title-sub">
+      <span id = "post-title-date">撰写于 2016-06-10</span>
       
-    
+        <span id = "post-title-updated">修改于 2016-06-12</span>
       
-        <h1 class="center-title">
-          分类
-          
-        </h1>
       
-    
-    <ul class="category-list">
-      
-        <li class="category-list-item">
-        
-          <a href="/categories/编程技术/">编程技术</a>
-        
-          <span class="category-list-count">1</span>
-        </li>
-      
-        <li class="category-list-item">
-        
-          <a class="active" href="/categories/编程日志/">编程日志</a>
-        
-          <span class="category-list-count">1</span>
-        </li>
-      
-    </ul>
-    
+      <span id = "post-title-categories">分类
       
       
         
-      
-      
-    
-      
-      
-      
-    
-      
-      
-      
-    
-      
-      
-      
-    
-      
-      
         
-          
-        
+        <a href="/categories/编程技术/">编程技术</a>
+      
+      </span>
       
       
-      <div class="post-title-item">
-  
-  <a href="/2016/06/05/20160608/">
-  
-    我为什么学前端
-  
-  </a>
-  <p class="page-title-sub">
-    <span id = "post-title-date">6-5</span>
+    </p>
     
-    <span id = "post-title-categories">分类
-    
-    
-      
-      
-      <a href="/categories/编程日志/">编程日志</a>
-    
-    </span>
-    
-    
-    
-      <br>
-      
-      
-    
-  </p>
-  
-</div>
-      
-    
+    <p>‘&lt;!DOCTYPE html&gt;</p>
+<p><html lang="en"></html></p>
+<p><head><br>    <meta charset="UTF-8"><br>    <title>Document</title><br>    <style></p>
+<pre><code> #tab{ width:240px;
+      border:1px solid gray;
+     margin:0 auto;
+     padding:15px 15px 10px 15px;
+
+     background:#D8D8D8;
+     }
+   ul{margin:0;
+      padding:0;
+       }
+ li{list-style:none;
+    /*border:1px solid black;*/
+     background:black;
+     width:70px;
+    /*难道宽设置仅仅是靠眼睛看着差不多去设置的吗？*/
+    float:left;
+    margin:5px;
+     color:white;
+     text-align:center;
+     }
+ #text{clear:both;
+        width:230px;
+       border:1px solid white;
+       background:#F0F0F0;
+       position:relative;
+       left:5px;
+        margin-top:30px;
+        /*这个语句为什么会没有任何反应呢。*/
+    }
+    .active{color:red;background:white;}
+
+&lt;/style&gt;
+</code></pre><p></head></p>
+<p><body></p>
+<div id="tab" class="calendar"><br>    <ul><br>        <li><h2>1</h2><p>JAN</p></li><br>        <li><h2>2</h2><p>JAN</p></li><br>        <li><h2>3</h2><p>JAN</p></li><br>        <li><h2>4</h2><p>JAN</p></li><br>        <li><h2>5</h2><p>JAN</p></li><br>        <li><h2>6</h2><p>JAN</p></li><br>        <li><h2>7</h2><p>JAN</p></li><br>        <li><h2>8</h2><p>JAN</p></li><br>        <li><h2>9</h2><p>JAN</p></li><br>        <li><h2>10</h2><p>JAN</p></li><br>        <li><h2>11</h2><p>JAN</p></li><br>        <li class="active"><h2>12</h2><p>JAN</p></li><br>     </ul><br>    <div id="text"><br>         <h2>一月的活动</h2><br>         <p>我要把智能社的视频再复习下，把写过的代码再重新写下。</p><br>    </div><br>    </div>
+
+<p></body><br></html><br><!-- 还是不会用列表进行布局，关键点就是我无法让三个li水平显示，形成四行三列的布局。 我觉得这里肯定要用到布局里浮动的有关知识，而这些掌握的并不牢靠。
+遇到的问题，无法更改ul和下一个div，即id为text的这个div，之间的间距。主要是有点小了，不过大致上还是布局出来了。灵感来源于gitbub百度前端作业1里任务六。-->‘</p>
+</style></head></p>
   </article>
 
   
+<nav id="pagination">
+  
+    <a href="/2016/06/12/20160612/" class="prev">&larr; 上一篇 hellow</a>
+  
 
+  
+
+  
+    <a href="/2016/06/09/20160609/" class="next">下一篇 4月28日至6月9日学习前端记录过程 &rarr;</a>
+  
+</nav>
+
+
+      
+      <div class="ds-thread" data-thread-key="2016/06/10/20160610/" data-title="简易日历之列表布局" data-url="http://tang-yue.github.io/2016/06/10/20160610/"></div>
       
       
       
@@ -183,6 +202,18 @@
   </div>
 
 </div>
+
+  <script type="text/javascript">
+var duoshuoQuery = {short_name:"tang-yue"};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0] 
+   || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
 
 
 
