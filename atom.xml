@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tang-yue.github.io/"/>
-  <updated>2016-07-04T14:34:39.798Z</updated>
+  <updated>2016-07-04T14:53:11.209Z</updated>
   <id>http://tang-yue.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://tang-yue.github.io/2016/06/12/zhinengshe-js/"/>
     <id>http://tang-yue.github.io/2016/06/12/zhinengshe-js/</id>
     <published>2016-06-12T07:03:34.000Z</published>
-    <updated>2016-07-04T14:34:39.798Z</updated>
+    <updated>2016-07-04T14:53:11.209Z</updated>
     
     <content type="html">&lt;p&gt;目录表示如下:&lt;br&gt;1a.html 1a.css 1a.js 用表格布局的简易日历，点击变动的是整个div&lt;br&gt;效果图。&lt;br&gt;&lt;img src=&quot;&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;1b.html 1b.css&lt;br&gt;仅仅是用列表实现的一个日历布局,没有用js。&lt;/p&gt;
@@ -37,6 +37,8 @@
     
     </summary>
     
+      <category term="编程技术" scheme="http://tang-yue.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/"/>
+    
     
   </entry>
   
@@ -45,7 +47,7 @@
     <link href="http://tang-yue.github.io/2016/06/09/20160609/"/>
     <id>http://tang-yue.github.io/2016/06/09/20160609/</id>
     <published>2016-06-09T13:07:53.000Z</published>
-    <updated>2016-06-10T02:24:40.695Z</updated>
+    <updated>2016-07-04T14:53:15.639Z</updated>
     
     <content type="html">&lt;p&gt;4月28号到5月1号上午。&lt;br&gt;第五天学习。&lt;br&gt;w3school学到布局这一节。慕课网上，把html和css过掉了。headfirst看到200页。&lt;/p&gt;
 &lt;p&gt;5月3日&lt;br&gt;head first看到466页。&lt;/p&gt;
@@ -77,7 +79,7 @@
     <link href="http://tang-yue.github.io/2016/06/05/20160608/"/>
     <id>http://tang-yue.github.io/2016/06/05/20160608/</id>
     <published>2016-06-05T11:25:43.000Z</published>
-    <updated>2016-06-09T13:02:10.923Z</updated>
+    <updated>2016-07-04T14:54:10.401Z</updated>
     
     <content type="html">&lt;p&gt;关于我为什么学习前端，我在脑袋想了很多答案。三年，徐州工程学院电子科学与技术专业。我自己的专业实在是没有学习到什么东西，几乎是一片空白。你可以说是因为我没有认真学，所以才会连本专业基础的知识点都不知道。我无法辩驳，我做不到，去认真学我的本专业。&lt;/p&gt;
 &lt;p&gt;三年，我该如何叙述我的三年。前1年半的时间，我的确是不知道我做了些什么。后一年半，可以受我哥哥一部分的影响，告诉我现在真的不是我可以什么都记不得年纪，也不是我的每一天都过得毫无变化的年纪，最重要的是努力，勤奋。在这个经历过高考之后，总会一身的懒散。而殊不知对于我来说，真正对这个世界的认知才刚刚开始。我没有认识到，我为那时自己的狭隘愚昧而难过。&lt;/p&gt;
@@ -105,7 +107,7 @@
     <link href="http://tang-yue.github.io/2016/05/29/hello-world/"/>
     <id>http://tang-yue.github.io/2016/05/29/hello-world/</id>
     <published>2016-05-29T13:30:47.171Z</published>
-    <updated>2016-06-07T02:18:35.563Z</updated>
+    <updated>2016-07-04T14:53:24.712Z</updated>
     
     <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;$ hexo new &amp;quot;My New Post&amp;quot;
