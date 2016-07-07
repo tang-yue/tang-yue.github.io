@@ -16,13 +16,9 @@
   
   
   
-    <meta name="description" content="目录表示如下:1a.html 1a.css 1a.js 用表格布局的简易日历，点击变动的是整个div效果图。
-1b.html 1b.css仅仅是用列表实现的一个日历布局,没有用js。
-1c.html 1c.css 1c.js表格布局，点击变动的是div里的innerHTML，而不是整个div。
-1d.html 1d.css 1d.jsjs部分为智能社代码，而布局是表格不是列表。
-2 模仿的选...">
+    <meta name="description" content="git入门安装git去Git官网下载。安装成功后，在开始菜单里找到“Git”-&gt;”Git Bash”,蹦出一个类似命令行的窗口的东西，就说明Git安装成功。安装完成后设置：命令行输入：git config –global user.name”Your Name”git config –global user.email”email@example.com”创建版本库‘git init’...">
   
-  <title>zhinengshe-js [ 醉眼天涯 ]</title>
+  <title>git入门以及hexo的常用命令 [ 醉眼天涯 ]</title>
   
     <link rel="alternate" href="/atom.xml" title="醉眼天涯">
   
@@ -43,22 +39,13 @@
 <body>
 <div class="side-navigate hide-area">
   
-    <div class="item prev">
-      <a href="/2016/07/07/git入门以及hexo的常用命令/">
-        <div class="item-icon"></div>
-      </a>
-      <div class="item-title">
-        git入门以及hexo的常用命令
-      </div>
-    </div>
-  
   
     <div class="item next">
-      <a href="/2016/06/09/20160609/">
+      <a href="/2016/06/12/zhinengshe-js/">
         <div class="item-icon"></div>
       </a>
       <div class="item-title">
-        4月28日至6月9日学习前端记录过程
+        zhinengshe-js
       </div>
     </div>
   
@@ -99,9 +86,9 @@
       
       
   <article id="post">
-    <h1>zhinengshe-js</h1>
+    <h1>git入门以及hexo的常用命令</h1>
     <p class="page-title-sub">
-      <span id = "post-title-date">撰写于 2016-06-12</span>
+      <span id = "post-title-date">撰写于 2016-07-07</span>
       
         <span id = "post-title-updated">修改于 2016-07-07</span>
       
@@ -118,33 +105,25 @@
       
     </p>
     
-    <p>目录表示如下:<br>1a.html 1a.css 1a.js 用表格布局的简易日历，点击变动的是整个div<br>效果图。<br><img src="/images/calendar.jpg" alt="简易日历.jpg"></p>
-<p>1b.html 1b.css<br>仅仅是用列表实现的一个日历布局,没有用js。</p>
-<p>1c.html 1c.css 1c.js<br>表格布局，点击变动的是div里的innerHTML，而不是整个div。</p>
-<p>1d.html 1d.css 1d.js<br>js部分为智能社代码，而布局是表格不是列表。</p>
-<p>2 模仿的选项卡。</p>
-<p>3 模仿的换肤实践</p>
-<p>4 模仿邮箱的全选，反选和不选。</p>
-<p>遇到的问题：托管在github上的代码，如何查看运行结果。其实这种想法是错误的，如果你只是把运行结果看成是静态的而不是动态的，完全可以在博客的源文件里放入静态的图片，然后点击跳转图片链接。但是貌似链接的路径存在问题。但是总觉得动态的无法实现，至少就我自己目前而已。</p>
+    <p><a href="">git入门</a><br><strong>安装git</strong><br>去<a href="https://git-scm.com/" target="_blank" rel="external">Git</a>官网下载。<br>安装成功后，在开始菜单里找到“Git”-&gt;”Git Bash”,蹦出一个类似命令行的窗口的东西，就说明Git安装成功。<br>安装完成后设置：命令行输入：<br>git config –global user.name”Your Name”<br>git config –global user.email”email@example.com”<br><strong>创建版本库</strong><br>‘git init’命令，初始化一个Git仓库。<br>‘git add <file>‘可以添加多个文件。<br>‘git commit -m “描述这个提交命令”‘完成。<br><strong>时光机穿梭</strong><br>‘git status’查看仓库当前仓库的状况。<br>‘git diff’具体查看修改了什么内容。<br><strong>版本回退</strong><br>‘git log’命令显示从最近到最远的提交日志。’git log –pretty=oneline’显示的信息要少的多。<br>‘git reset –hard HEAD^’’HEAD’表示当前版本，这个命令是回退到上一个版本。<br>‘cat <file>‘查看文件内容<br>‘git reset –hard commit id(版本号只要写前几位就可以了)’<br>列如’git reset –hard 3628164’即可回到指定的版本。<br>必须要记得commit id。’git reflog’查看命令历史，以便要回到未来的那个版本。<br>‘git log’可以查看提交历史，以便确定要回退到哪个版本。<br><strong>工作区和暂存区</strong><br>工作区:就是你在电脑里能看到的目录，比如我的learngit文件夹就是一个工作区。<br>‘git add’把文件添加进去，实际上就是把文件修改添加到暂存区;<br>‘git commit’提交更改，实际上就是把暂存区的所有内容提交到当前分支。<br><strong>撤销修改</strong><br>‘git checkout – file’改动了工作区的某个文件的内容，直接丢掉工作区的修改。<br>‘git reset HEAD file’回到上一步，按上一步的操作来。<br>最后如果已经提交了不适合的修改到版本库时，想要撤销本次提交，参考版本回退，不过没有推送到远程库。<br><strong>删除文件</strong><br>‘git rm <file>‘用于删除一个文件,并且’git commit’文件从版本库中被删除。<br>‘git checkout – test.txt’用于删错文件,版本库里还有，一键还原。<br><strong>添加远程库</strong><br>在本地的learngit仓库下运行命令：<br>‘git remote add origin <a href="https://github.com/tang-yue/zhinengshe.git" target="_blank" rel="external">https://github.com/tang-yue/zhinengshe.git</a>‘<br>注意这里origin会被占用，所以要换用其他的才可以成功添加。<br>‘git push -u origin master’把本地库的所有内容推送到远程库上。<br>‘git push origin master’推送最新修改。<br><strong>克隆一个远程仓库</strong><br>‘git clone <a href="https://github.com/tang-yue/gitskills.git&#39;进入gitskills目录下就有github上的文件了。" target="_blank" rel="external">https://github.com/tang-yue/gitskills.git&#39;进入gitskills目录下就有github上的文件了。</a><br><strong>使用github</strong><br>在github上，可以Fork开源仓库;自己拥有Fork后的仓库的读写权限;可以推送pull request给官方仓库来贡献代码。<br><strong>创建与合并分支</strong><br>‘git branch’查看分支<br>‘git branch <name>‘创建分支<br>‘git checkout <name>‘切换分支<br>‘git checkout -b <name>‘创建+切换分支<br>‘git merge <name>‘合并某分支到当前分支<br>‘git branch -d <name>‘删除分支<br><strong>解决冲突</strong><br>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。用’git log –graph’命令可以看到分支合并图。<br><strong>参考链接</strong><br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">廖雪峰Git教程</a></name></name></name></name></name></file></file></file></p>
+<p><a href="">hexo的常用命令</a><br>‘hexo clean’清理database和/public目录，/public目录里是生成的静态文件数据。<br>‘hexo generaet’简写是”hexo g”命令是用来生成静态页面的 会创建/public目录静态页面数据都在这个文件夹里。<br>‘hexo deploy’一键部署命令上面在_config.yml文件中配置了部署信息，这个命令一键部署。<br>‘npm install hexo-deployer-git –save’##安装部署所需要的插件<br>‘npm install hexo-server –save’##安装server插件<br>‘hexo n “my post”‘新建文章<br>‘hexo new page “pageName”‘新建页面<br><strong>参考链接</strong><br><a href="http://www.mashiro.io/2015/09/hexo-guide-3/" target="_blank" rel="external">hexo系列教程</a><br><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">hexo你的博客</a><br><a href="http://blog.shijinrong.cn/2016/01/03/2016-01-03-how-to-build-blog/" target="_blank" rel="external">hexo搭建博客</a></p>
 
   </article>
 
   
 <nav id="pagination">
   
-    <a href="/2016/07/07/git入门以及hexo的常用命令/" class="prev">&larr; 上一篇 git入门以及hexo的常用命令</a>
-  
 
   
 
   
-    <a href="/2016/06/09/20160609/" class="next">下一篇 4月28日至6月9日学习前端记录过程 &rarr;</a>
+    <a href="/2016/06/12/zhinengshe-js/" class="next">下一篇 zhinengshe-js &rarr;</a>
   
 </nav>
 
 
       
-      <div class="ds-thread" data-thread-key="2016/06/12/zhinengshe-js/" data-title="zhinengshe-js" data-url="http://tang-yue.github.io/2016/06/12/zhinengshe-js/"></div>
+      <div class="ds-thread" data-thread-key="2016/07/07/git入门以及hexo的常用命令/" data-title="git入门以及hexo的常用命令" data-url="http://tang-yue.github.io/2016/07/07/git入门以及hexo的常用命令/"></div>
       
       
       
