@@ -1,0 +1,383 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="author" content="Tang Yue">
+  
+  
+  
+  
+    <meta name="description" content="git入门
+安装git
+去Git官网下载。
+安装成功后，在开始菜单里找到“Git”->"Git Bash",蹦出一个类似命令行的窗口的东西，就说明Git安装成功。
+安装完成后设置：命令行输入：
+git config --global user.name"Your Name"
+git config --global user.email"email@example.com"
+创建版本库
+`gi...">
+  
+  <title>git入门以及hexo的常用命令 [ 醉眼天涯 ]</title>
+  
+    <link rel="alternate" href="/atom.xml" title="醉眼天涯">
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+  <link rel="stylesheet" href="/css/random.css">
+<link rel="stylesheet" href="/css/vegas.min.css">
+<link rel="stylesheet" href="/css/highlight-railscasts.css">
+<link rel="stylesheet" href="/css/jquery.fancybox.css">
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+<link rel="stylesheet" href="/css/jquery.fancybox-thumbs.css">
+<link rel="stylesheet" href="/css/plyr.css">
+  
+</head>
+
+<body>
+<div class="side-navigate hide-area">
+  
+  
+    <div class="item next">
+      <a href="/2016/07/07/git入门以及hexo的常用命令/">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        git入门以及hexo的常用命令
+      </div>
+    </div>
+  
+</div>
+<div id="container" class="hide-area">
+  <div id="menu-outer" class="slide-down">
+    <div id="menu-inner">
+      <div id="brand">
+        
+        <a onClick="openUserCard()">
+          <img id="avatar" src="/images/avatar.jpg"/>
+          <div id="homelink">醉眼天涯</div>
+        </a>
+      </div>
+      <div id="menu-list">
+        <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/archives">文章</a></li>
+        
+          <li><a href="/tags">标签</a></li>
+        
+          <li><a href="/categories">分类</a></li>
+        
+          <li><a href="/about">关于</a></li>
+        
+        </ul>
+      </div>
+      <div id="show-menu">
+        <button>Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="content-outer">
+    <div id="content-inner">
+      
+      
+  <article id="post">
+    <h1>git入门以及hexo的常用命令</h1>
+    <p class="page-title-sub">
+      <span id = "post-title-date">撰写于 2016-07-07</span>
+      
+        <span id = "post-title-updated">修改于 2016-07-08</span>
+      
+      
+      <span id = "post-title-categories">分类
+      
+      
+        
+        
+        <a href="/categories/编程技术/">编程技术</a>
+      
+      </span>
+      
+      
+    </p>
+    
+    <h3>git入门</h3>
+<strong>安装git</strong>
+去<link href="https://git-scm.com/">Git官网下载。
+安装成功后，在开始菜单里找到“Git”->"Git Bash",蹦出一个类似命令行的窗口的东西，就说明Git安装成功。
+安装完成后设置：命令行输入：
+<code>git config --global user.name"Your Name"</code>
+<code>git config --global user.email"email@example.com"</code>
+<strong>创建版本库</strong>
+`git init`命令，初始化一个Git仓库。
+`git add <file>`可以添加多个文件。
+`git commit -m "描述这个提交命令"`完成。
+**时光机穿梭**
+`git status`查看仓库当前仓库的状况。
+`git diff`具体查看修改了什么内容。
+**版本回退**
+`git log`命令显示从最近到最远的提交日志。`git log --pretty=oneline`显示的信息要少的多。
+`git reset --hard HEAD^``HEAD`表示当前版本，这个命令是回退到上一个版本。
+`cat <file>`查看文件内容
+`git reset --hard commit id(版本号只要写前几位就可以了)`
+列如`git reset --hard 3628164`即可回到指定的版本。
+必须要记得commit id。`git reflog`查看命令历史，以便要回到未来的那个版本。
+`git log`可以查看提交历史，以便确定要回退到哪个版本。
+**工作区和暂存区**
+工作区:就是你在电脑里能看到的目录，比如我的learngit文件夹就是一个工作区。
+`git add`把文件添加进去，实际上就是把文件修改添加到暂存区;
+`git commit`提交更改，实际上就是把暂存区的所有内容提交到当前分支。
+**撤销修改**
+`git checkout -- file`改动了工作区的某个文件的内容，直接丢掉工作区的修改。
+`git reset HEAD file`回到上一步，按上一步的操作来。
+最后如果已经提交了不适合的修改到版本库时，想要撤销本次提交，参考版本回退，不过没有推送到远程库。
+**删除文件**
+`git rm <file>`用于删除一个文件,并且`git commit`文件从版本库中被删除。
+`git checkout -- test.txt`用于删错文件,版本库里还有，一键还原。
+**添加远程库**
+在本地的learngit仓库下运行命令：
+`git remote add origin https://github.com/tang-yue/zhinengshe.git`
+注意这里origin会被占用，所以要换用其他的才可以成功添加。
+`git push -u origin master`把本地库的所有内容推送到远程库上。
+`git push origin master`推送最新修改。
+**克隆一个远程仓库**
+`git clone https://github.com/tang-yue/gitskills.git`进入gitskills目录下就有github上的文件了。
+**使用github**
+在github上，可以Fork开源仓库;自己拥有Fork后的仓库的读写权限;可以推送pull request给官方仓库来贡献代码。
+**创建与合并分支**
+`git branch`查看分支
+`git branch <name>`创建分支
+`git checkout <name>`切换分支
+`git checkout -b <name>`创建+切换分支
+`git merge <name>`合并某分支到当前分支
+`git branch -d <name>`删除分支
+**解决冲突**
+当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。用`git log --graph`命令可以看到分支合并图。
+**参考链接**
+[廖雪峰Git教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
+
+### hexo的常用命令
+`hexo clean`清理database和/public目录，/public目录里是生成的静态文件数据。
+`hexo generaet`简写是"hexo g"命令是用来生成静态页面的 会创建/public目录静态页面数据都在这个文件夹里。
+`hexo deploy`一键部署命令上面在_config.yml文件中配置了部署信息，这个命令一键部署。
+`npm install hexo-deployer-git --save`##安装部署所需要的插件
+`npm install hexo-server --save`##安装server插件
+`hexo n "my post"`新建文章
+`hexo new page "pageName"`新建页面
+**参考链接**
+[hexo系列教程](http://www.mashiro.io/2015/09/hexo-guide-3/)
+[hexo你的博客](http://ibruce.info/2013/11/22/hexo-your-blog/)
+[hexo搭建博客](http://blog.shijinrong.cn/2016/01/03/2016-01-03-how-to-build-blog/)
+
+### markdown语法
+**建立代码块**：建立代码区块只要简单地缩进4个空格或是一个制表符即可。
+**邮箱**:<tang_yue@foxmail.com>
+
+![markdown语法速记](/../markdown.png)
+**参考链接**
+[十分钟学会markdown](http://i.cmgine.net/archives/12291.html)
+
+
+</tang_yue@foxmail.com></name></name></name></name></name></file></file></file>
+  </article>
+
+  
+<nav id="pagination">
+  
+
+  
+
+  
+    <a href="/2016/07/07/git入门以及hexo的常用命令/" class="next">下一篇 git入门以及hexo的常用命令 &rarr;</a>
+  
+</nav>
+
+
+      
+      <div class="ds-thread" data-thread-key="2016/07/07/git入门/" data-title="git入门以及hexo的常用命令" data-url="http://tang-yue.github.io/2016/07/07/git入门/"></div>
+      
+      
+      
+    </div>
+  </div>
+
+  <div id="bottom-outer">
+    <div id="bottom-inner">
+      Site by Tang Yue using
+      <a href="http://hexo.io">Hexo</a> & <a href="https://github.com/stiekel/hexo-theme-random">Random</a>
+      <br>
+      
+    </div>
+  </div>
+  </div>
+
+</div>
+
+  <script type="text/javascript">
+var duoshuoQuery = {short_name:"tang-yue"};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0] 
+   || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+
+
+
+<div id="user-card">
+  <div class="center-field">
+    <img class="avatar" src="/images/avatar.jpg">
+    <p id="description">后来很多人问我一个人夜晚踟蹰路上的心情，我想起的却不是孤单与路长，而是波澜壮阔的海和天空中闪耀的星光。</p>
+    <ul class="social-icon">
+  
+  
+    <li>
+      <a href="https://github.com/tang-yue">
+        
+          <i class="icon iconfont github">&#xe606;</i>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://weibo.com/tangyue1129">
+        
+          <i class="icon iconfont weibo">&#xe602;</i>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.douban.com/people/tangyue1129/">
+        
+          <i class="icon iconfont douban">&#xe609;</i>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.zhihu.com/people/tang-yue-35">
+        
+          <i class="icon iconfont zhihu">&#xe60b;</i>  
+        
+      </a>
+    </li>
+  
+</ul>
+  </div>
+</div>
+
+
+<div id="btn-view">Hide</div>
+
+
+
+
+
+  
+  
+    <script src="/js/jquery-2.2.3.min.js"></script>
+  
+    <script src="/js/vegas.min.js"></script>
+  
+    <script src="/js/random.js"></script>
+  
+    <script src="/js/highlight.pack.js"></script>
+  
+    <script src="/js/jquery.mousewheel.pack.js"></script>
+  
+    <script src="/js/jquery.fancybox.pack.js"></script>
+  
+    <script src="/js/jquery.fancybox-thumbs.js"></script>
+  
+    <script src="/js/plyr.js"></script>
+  
+
+<script>
+
+  // fancybox
+  var backgroundImages = [];
+  
+    
+      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_1.jpg?imageView2/1/w/__width__/h/__height__');
+    
+      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_2.jpg?imageView2/1/w/__width__/h/__height__');
+    
+      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_3.jpg?imageView2/1/w/__width__/h/__height__');
+    
+      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_4.jpg?imageView2/1/w/__width__/h/__height__');
+    
+      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_5.jpg?imageView2/1/w/__width__/h/__height__');
+    
+  
+  $('#post').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox') || $(this).parent().hasClass('fancybox-thumb')) return;
+      var alt = this.alt || this.title;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'post' + i);
+    });
+  });
+  $(".fancybox").fancybox();
+
+var vegasConfig = {"preload­Image":true,"transition":["slideLeft2","slideRight2","flash2"],"timer":true,"delay":5000,"shuffle":true,"count":28};
+var unsplashConfig = {"gravity":"north"};
+
+$(".fancybox-thumb").fancybox({
+  prevEffect: 'none',
+  nextEffect: 'none',
+  helpers: {
+    title: {
+      type: 'outside'
+    },
+    thumbs: {
+      width: 50,
+      height: 50
+    }
+  }
+});
+
+// show video with plyr
+$(".video-container iframe").each(function(i){
+  var url = $(this).attr('src');
+  var id = url.split('/').pop();
+  var plyrContainer = document.createElement('div');
+  plyrContainer.className = 'plyr';
+  var plyrElement = document.createElement('div');
+  plyrElement.dataset.videoId = id;
+  switch(true) {
+    case url.search('youtube.com') >= 0:
+      plyrElement.dataset.type = 'youtube';
+      break;
+    case url.search('vimeo.com') >= 0:
+      plyrElement.dataset.type = 'vimeo';
+      break;
+    default:
+      return;
+  };
+  plyrContainer.appendChild(plyrElement);
+  $(this).parent().html(plyrContainer);
+});
+plyr.setup('.plyr', {iconUrl: '/css/sprite.svg'});
+</script>
+</body>
+</html>
+
