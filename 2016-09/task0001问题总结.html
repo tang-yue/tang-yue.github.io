@@ -1,0 +1,339 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="author" content="Tang Yue">
+  
+  
+  
+  
+    <meta name="description" content="task0001问题总结index页面遇到的问题：如何让实际内容是980px？头部的背景总和浏览器器的顶部有一定的间隙。   解决：* {margin：0；padding：0；}这个是一般布局都要加上去的。字体部分，宋体，以及logo不知道是什么字体。如何让菜单栏显示在头部背景的底部。不知道如何让块元素并排显示。logo和菜单栏以及github图标。浮动和绝对定位互相矛盾，该如何让菜单栏既是...">
+  
+  <title>task0001问题总结 [ 醉眼天涯 ]</title>
+  
+    <link rel="alternate" href="/atom.xml" title="醉眼天涯">
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+  <link rel="stylesheet" href="/css/random.css">
+<link rel="stylesheet" href="/css/vegas.min.css">
+<link rel="stylesheet" href="/css/highlight-railscasts.css">
+<link rel="stylesheet" href="/css/jquery.fancybox.css">
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+<link rel="stylesheet" href="/css/jquery.fancybox-thumbs.css">
+<link rel="stylesheet" href="/css/plyr.css">
+  
+</head>
+
+<body>
+<div class="side-navigate hide-area">
+  
+  
+    <div class="item next">
+      <a href="/2016-09/王家卫电影风格演讲ppt制作.html">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        王家卫电影风格演讲ppt制作
+      </div>
+    </div>
+  
+</div>
+<div id="container" class="hide-area">
+  <div id="menu-outer" class="slide-down">
+    <div id="menu-inner">
+      <div id="brand">
+        
+        <a onClick="openUserCard()">
+          <img id="avatar" src="/images/avatar.jpg"/>
+          <div id="homelink">醉眼天涯</div>
+        </a>
+      </div>
+      <div id="menu-list">
+        <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/archives">文章</a></li>
+        
+          <li><a href="/tags">标签</a></li>
+        
+          <li><a href="/categories">分类</a></li>
+        
+          <li><a href="/about">关于</a></li>
+        
+        </ul>
+      </div>
+      <div id="show-menu">
+        <button>Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="content-outer">
+    <div id="content-inner">
+      
+      
+  <p>"2016-09/task0001问题总结.html"</p>
+  <p>"http://tang-yue.github.io/2016-09/task0001问题总结.html"</p>
+  <p>"2016-09/task0001问题总结.html"</p>
+  <p>"http://tang-yue.github.io/2016-09/task0001问题总结.html"</p>
+  <p>"/2016-09/task0001问题总结.html"</p>
+    <article id="post">
+    <h1>task0001问题总结</h1>
+    <p class="page-title-sub">
+      <span id = "post-title-date">撰写于 2016-09-16</span>
+      
+        <span id = "post-title-updated">修改于 2016-09-16</span>
+      
+      
+      <span id = "post-title-categories">分类
+      
+      
+        
+        
+        <a href="/categories/编程技术/">编程技术</a>
+      
+      </span>
+      
+      
+    </p>
+    
+    <h3 id="task0001问题总结"><a href="#task0001问题总结" class="headerlink" title="task0001问题总结"></a>task0001问题总结</h3><p>index页面遇到的问题：<br>如何让实际内容是980px？<br>头部的背景总和浏览器器的顶部有一定的间隙。<br>   解决：<code style="background: #999; font-family: Consolas, Monaco, Courier New, Lucida Console; font-style: italic;">* {margin：0；padding：0；}</code>这个是一般布局都要加上去的。<br>字体部分，宋体，以及logo不知道是什么字体。<br>如何让菜单栏显示在头部背景的底部。<br>不知道如何让块元素并排显示。logo和菜单栏以及github图标。<br>浮动和绝对定位互相矛盾，该如何让菜单栏既是浮动在右侧又能够和底部相距5px？</p>
+<p>遇到的问题：明明参照w3school上面的插入背景图片的方法，但是到自己实现的时候，怎么都没有反应。现在<br>又觉得即使显示图片但是整个图片会被会坏掉。</p>
+<h2 id="如何让文字显示在图片上。"><a href="#如何让文字显示在图片上。" class="headerlink" title="如何让文字显示在图片上。"></a>如何让文字显示在图片上。</h2><p>7月18号<br>logo图标是如何生成为图片的？<br> 答：应该要用ps生成吧。<br>如何让文字显示在图片上？<br>关于透明度相关部分。<br>图片背景和头部总有间隙，如何消除？<br>答：因为设置了inline-block元素才出现的空白间距。标签img默认是inline元素（内联元素，行内元素），计算高度时要加上line-height的默认值（4px）。<br>7月19号<br>实在还是做不出来，于是我找了相关的css博客开发，看看博客搭建的思路</p>
+<p>css3实战-扁平化博客开发笔记<br>nav ul<br>{ list-style: none;}<br>nav ul li<br>{ display: inline-block;}<br>nav ul li a<br>{ display: inherit;<br>padding: 6px 20px;}这里就是继承了上面的inline-block的属性。<br>h1<br>{ margin: 0;}/这里和4px差不多因此要消除。<br>自己开始跟着写。一遍不行就写三遍，三遍不行，就写5遍，知道自己背出来。<br>sublime快捷键的使用<br>列表：<br>（li&gt;a{item$})*4<br>如何快速写。的快捷键是什么？<br>当给nav设置背景色的时候为什么没有显示呢？<br>因为nav内部的元素都是浮动的，瘫缩了，因此要清除浮动。<br>而清除浮动的代码为：<br>.clearfix:before,<br>.clearfix:after {<br>content:” “;<br>display:table;<br>clear:both;}<br>这里值得注意的是要加上clear:both才有效果。然而视频中并没有写出来仍旧可以显示效果，我不理解。参考链结：<a href="http://stackoverflow.com/questions/27501912/why-is-my-clearfix-not-working-in-firefox/27502178#27502178" target="_blank" rel="external">http://stackoverflow.com/questions/27501912/why-is-my-clearfix-not-working-in-firefox/27502178#27502178</a><br>这里应该也是一个比较大的知识点。<br>8月25日<br>继续扁平化博客。笔记。</p>
+<p>写注释的快捷键是什么？<br>整理一下灰色的深浅度的。有什么共同点和不同点。<br>logo容器和ul容器明明就是在同一层，但是在调整logo的padding属性的时候，ul容器掉下来了，为此使用box-sizing。即：</p>
+<pre><code>    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+</code></pre><p>这样就没有问题了。<br>li{item$}<br>即为<br>            <li>item1</li><br>            <li>item2</li><br>            <li>item3</li><br>            <li>item4</li><br>遇到的问题是:background: url(路径)。这个在上次应用中并没有起到作用，因此我就在想是不是chrome浏览器不支持。但是9月1号，再试的时候又完全没有问题了。纳闷中更多的是开心。<br>background-size: cover;即是覆盖原背景图。<br>class=“inner_header article”这是在HTML中<br>.inner_header.article    注意这里中间并没有空格，表示的是一个类既叫inner_header又叫article。如果中间有空格则表示，类inner_header下的类article。完全是不一样的概念。<br>在sublime里，css和html来回切换的快捷键是什么？<br>ctrl+tab。<br>看了一遍css命名规范，最好不要用下划线命名，而采用中横线。</p>
+<p>9月1号<br>再次尝试task0001任务。虽然理解了一些，但是很多对于现在的我来说，还是觉得困难，我不知道是因为我被困难吓倒了，所以每次开始编写代码的时候，都会有点力不从心，有点不愿意的感觉。<br>总结，关于github链接的问题，<a href="tang-yue.github.io"></a>这个链接是错误的。而必须写成<a href="http://tang-yue.github.io"></a>这样才可以。<br>遇到同样的问题，就是如何让菜单栏既向右浮动，又使其底部距离header为5px。</p>
+<p>不止一次遇到，sublime会延迟反应，每次出现错误，改了好多，才显示想要的效果，但是返回上一步，和刚才的一样，并不会显示错误。so，重点是我不知道哪里出错了，这个让我很苦恼呀。<br>9月1号21:14点，content的第一部分完成，没有遇到什么太大的问题。总算过来了。</p>
+<p>9月2号遇到的问题，就是如何让三个木块的高度一致，又让它们的高度自适应内容，这个应该如何布局?结果是用.post { margin: 10px 0 -10000px;padding-bottom: 10000px}同时，总的div应该清除浮动，还有就是padding没有负值，而margin有负值。因此是不能够颠倒的。</p>
+<p>下面介绍部分，正圆形头像应该如何设置。灰色背景图的下半部分的长度等于多少，我只知道应该底部=左右侧的长度，可是应该是多少呢，因为你并不知道浏览器的宽度。<br>再看完别人写的代码之后就觉得其实也没有那么难。</p>
+<p>9月2号，脚部终于完成了，期间遇到了一些问题，但是自己解决了，这点我很开心。</p>
+<p>9月3号，7点35时，搜索框怎么办？</p>
+<p>遇到的问题就是如何让正文的左侧部分和980px的左侧部分对齐？？？？？？？？？<br>加深了对相对定位和绝对定位的理解，即使用绝对定位会将该元素清除出div，即相对的div里，没有了该元素的位置。该元素不再占有任何的空间。这是我第一次这么清楚的理解，同时，相对定位，绝对定位，不要忘了还可使用负值。而我的脑袋里大多第一反应是正值极少用到，负值。希望下次能够注意。</p>
+<p>下面遇到的问题是，如何在搜索框里加搜索图标。还有就是当鼠标移动到上面的时候，边框的颜色加深，以及背景颜色加深，因为我只学过，对a链接加深，而没有对其他的使用过。</p>
+<p>9月4号，逛街一天。</p>
+<p>9月5号，遇到的问题，当我给表格的底部加下划线的时候，发现，下划线是断开的不连续。还有就是table，th,td {}和table tr td的似乎有点模糊。<br>9月5号 9点41分：blog页面完成但是存在字体不符合的问题。</p>
+<p>我并没有再次重新定义gallery-center以及gallery-content和sidebar而是沿用了blog里面的css。我觉得这样可以减少css里代码量。<br>比如我想定义右侧边框和左侧边框，但是他们是一样的，有没有简单一点的定义css。<br>遇到字体问题。</p>
+<p>遇到问题即如何给字母加上外圆。<br>9月6号，这个问题参考了别人的答案。其相应的代码为：<br>border: 1px solid #fff;<br>border-radius: 50%;<br>width: 28px;<br>height: 28px;//这里是定义圆的大小。<br>text-align: center;<br>line-height: 28px;<br>color: #fff;<br>遇到问题，给p标签浮动，在一个宽度比较宽的div里，可以浮动，但是当换一个比较小的div的时候，p标签就掉下来了。<br>瀑布流布局存在问题。<br>复习，clearfix究竟是用在什么地方？？？？？？</p>
+<p>这个瀑布式布局真的好难！！！！我本想用浮动布局来实现，可是每个div我已经调了左右的margin，但是，用f12查看的时候，它的宽度，有一侧变化了，但是另一侧怎么都改变不了，我想这是无法实现浮动布局的主要原因。<br>我承认的确如果有人做过一遍的话，我会趋向于去看这个人的答案，我知道这是一个很不好的习惯。我尽量去不看，自己去找答案。<br>等完把这个完成，我就写博客！！！！！<br>关于瀑布式布局，一种是列表的形式，另一种是用绝对定位的，第二种里面需要用到js。<br>宿舍的渣渣网速，移动宽带另个人分，连慕课网的视频都看不了。<br>自己尝试用ul列表的形式去实现瀑布流式布局，但是在做到使其浮动的时候根本就没有反应？？？主要原因是我明明给li标签加上了width，下边距和右边距，下边距没有问题，但是右边距加了和没有加是一样的，根本没有反应。可能就是这样没法浮动的吧。</p>
+<p>加载更多的符号应该怎么打出来。用搜狗的特殊符号。<br>现在轮到人气排行榜了。我首先想到的是用列表布局。但是不可能用5<li>标签那么简单。因为三个之间是有间隔的。于是我又想到了能不能再次模仿瀑布流式布局。<br>即三个ul，然后三个ul向左浮动。试试吧。<br>如何填充这个方框的背景而不把它填充满呢？？？<br>写着写着就会写了。已经解决。</li></p>
+<p>9月8号上午9点43分<br>终于写到最后页关于页面了。<br>加油！！<br>center部分突然感觉无法下手。。<br>不知道应该如何写，还有就是头像的边上并非白色而是body的背景色灰色。<br>我用三个div并排显示，中间一个div相当于中轴线，结果失败，因为在中间一个div里插入图片，根本不可能把中轴线随图片的宽度撑开。<br>从11点开始想，中午睡午觉的时候又想了会，还是不知道应该怎么做。<br>我还有其他的办法吗？因为本来对圆圈形的头像的布置就不怎么熟悉。<br>前端虐我千百遍，我仍待它如初恋。<br>是的，这是这个实在做不出来了，我要参照别人写的代码。<br>我就像狗急了，跳墙一样，不知所以然。</p>
+<p>原来并没有用三个div而是用来两个div，来尝试一下吧。此刻疯狂写代码的我，不禁眼里流出泪水。或许是被自己给感动哭了吧，很久没有这么如此的拼命学习了。有点矫情了哈。我知道相对于被人的努力，自己这些根本就不算什么。</p>
+<p>一直到把img的外圆圈布置出来，这里都很容易理解，下面的关键部分就是应该如何把这个头像放置到应该放的地方。<br>现在发现身边有个人支持我学习，这是多么令人快乐的事，谢谢你，一个陌生人，每每想起都会由心的感动。</p>
+<p>我已经把头像移动到正确的位置了，但是它的头像的左下部分被右侧的div背景白色给填充了。这可如何是好。此时我是用class属性进行定义的。我们知道行间的样式是优先于class属性的，于是我再次用行间样式进行定义发现得到的结果是一样的。因此得要用绝对定位进行定义。</p>
+<p>原来是用绝对定位，现在就很清楚了。<br>9月9号8点27分<br>终于完成了。。。。真开心！！！</p>
+
+  </article>
+
+  
+<nav id="pagination">
+  
+
+  
+
+  
+    <a href="/2016-09/王家卫电影风格演讲ppt制作.html" class="next">下一篇 王家卫电影风格演讲ppt制作 &rarr;</a>
+  
+</nav>
+
+
+      
+      <div class="ds-thread" data-thread-key="2016-09/task0001问题总结.html" data-title="task0001问题总结" data-url="http://tang-yue.github.io/2016-09/task0001问题总结.html"></div>
+      
+      
+      
+    </div>
+  </div>
+
+  <div id="bottom-outer">
+    <div id="bottom-inner">
+      Site by Tang Yue using
+      <a href="http://hexo.io">Hexo</a> & <a href="https://github.com/stiekel/hexo-theme-random">Random</a>
+      <br>
+      
+        &copy;
+        
+
+        2016
+        
+      
+    </div>
+  </div>
+  </div>
+
+</div>
+
+  <script type="text/javascript">
+var duoshuoQuery = {short_name:"tang-yue"};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0] 
+   || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+
+
+
+<div id="user-card">
+  <div class="center-field">
+    <img class="avatar" src="/images/avatar.jpg">
+    <p id="description">后来很多人问我一个人夜晚踟蹰路上的心情，我想起的却不是孤单与路长，而是波澜壮阔的海和天空中闪耀的星光。</p>
+    <ul class="social-icon">
+  
+  
+    <li>
+      <a href="https://github.com/tang-yue">
+        
+          <i class="icon iconfont github">&#xe606;</i>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://weibo.com/tangyue1129">
+        
+          <i class="icon iconfont weibo">&#xe602;</i>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.douban.com/people/tangyue1129/">
+        
+          <i class="icon iconfont douban">&#xe609;</i>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.zhihu.com/people/tang-yue-35">
+        
+          <i class="icon iconfont zhihu">&#xe60b;</i>  
+        
+      </a>
+    </li>
+  
+</ul>
+  </div>
+</div>
+
+
+<div id="btn-view">Hide</div>
+
+
+
+
+
+  
+  
+    <script src="/js/jquery-2.2.3.min.js"></script>
+  
+    <script src="/js/vegas.min.js"></script>
+  
+    <script src="/js/random.js"></script>
+  
+    <script src="/js/highlight.pack.js"></script>
+  
+    <script src="/js/jquery.mousewheel.pack.js"></script>
+  
+    <script src="/js/jquery.fancybox.pack.js"></script>
+  
+    <script src="/js/jquery.fancybox-thumbs.js"></script>
+  
+    <script src="/js/plyr.js"></script>
+  
+
+<script>
+
+  // fancybox
+  var backgroundImages = [];
+  
+    
+      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_1.jpg?imageView2/1/w/__width__/h/__height__');
+    
+      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_2.jpg?imageView2/1/w/__width__/h/__height__');
+    
+      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_3.jpg?imageView2/1/w/__width__/h/__height__');
+    
+      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_4.jpg?imageView2/1/w/__width__/h/__height__');
+    
+      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_5.jpg?imageView2/1/w/__width__/h/__height__');
+    
+  
+  $('#post').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox') || $(this).parent().hasClass('fancybox-thumb')) return;
+      var alt = this.alt || this.title;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'post' + i);
+    });
+  });
+  $(".fancybox").fancybox();
+
+var vegasConfig = {"preload­Image":true,"transition":["slideLeft2","slideRight2","flash2"],"timer":true,"delay":5000,"shuffle":true,"count":28};
+var unsplashConfig = {"gravity":"north"};
+
+$(".fancybox-thumb").fancybox({
+  prevEffect: 'none',
+  nextEffect: 'none',
+  helpers: {
+    title: {
+      type: 'outside'
+    },
+    thumbs: {
+      width: 50,
+      height: 50
+    }
+  }
+});
+
+// show video with plyr
+$(".video-container iframe").each(function(i){
+  var url = $(this).attr('src');
+  var id = url.split('/').pop();
+  var plyrContainer = document.createElement('div');
+  plyrContainer.className = 'plyr';
+  var plyrElement = document.createElement('div');
+  plyrElement.dataset.videoId = id;
+  switch(true) {
+    case url.search('youtube.com') >= 0:
+      plyrElement.dataset.type = 'youtube';
+      break;
+    case url.search('vimeo.com') >= 0:
+      plyrElement.dataset.type = 'vimeo';
+      break;
+    default:
+      return;
+  };
+  plyrContainer.appendChild(plyrElement);
+  $(this).parent().html(plyrContainer);
+});
+plyr.setup('.plyr', {iconUrl: '/css/sprite.svg'});
+</script>
+</body>
+</html>
+
