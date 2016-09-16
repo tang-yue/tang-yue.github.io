@@ -105,18 +105,17 @@
       
     </p>
     
-    <h3 id="task0001问题总结"><a href="#task0001问题总结" class="headerlink" title="task0001问题总结"></a>task0001问题总结</h3><p>index页面遇到的问题：<br>如何让实际内容是980px？<br>头部的背景总和浏览器器的顶部有一定的间隙。<br>   解决：* {margin：0；padding：0；}这个是一般布局都要加上去的。<br>字体部分，宋体，以及logo不知道是什么字体。<br>如何让菜单栏显示在头部背景的底部。<br>不知道如何让块元素并排显示。logo和菜单栏以及github图标。<br>浮动和绝对定位互相矛盾，该如何让菜单栏既是浮动在右侧又能够和底部相距5px？</p>
+    <h3 id="task0001问题总结"><a href="#task0001问题总结" class="headerlink" title="task0001问题总结"></a>task0001问题总结</h3><p>index页面遇到的问题：<br>如何让实际内容是980px？<br>头部的背景总和浏览器器的顶部有一定的间隙。<br>   解决：<code>* {margin：0；padding：0；}</code>这个是一般布局都要加上去的。<br>字体部分，宋体，以及logo不知道是什么字体。<br>如何让菜单栏显示在头部背景的底部。<br>不知道如何让块元素并排显示。logo和菜单栏以及github图标。<br>浮动和绝对定位互相矛盾，该如何让菜单栏既是浮动在右侧又能够和底部相距5px？</p>
 <p>遇到的问题：明明参照w3school上面的插入背景图片的方法，但是到自己实现的时候，怎么都没有反应。现在<br>又觉得即使显示图片但是整个图片会被会坏掉。</p>
 <h2 id="如何让文字显示在图片上。"><a href="#如何让文字显示在图片上。" class="headerlink" title="如何让文字显示在图片上。"></a>如何让文字显示在图片上。</h2><p>7月18号<br>logo图标是如何生成为图片的？<br> 答：应该要用ps生成吧。<br>如何让文字显示在图片上？<br>关于透明度相关部分。<br>图片背景和头部总有间隙，如何消除？<br>答：因为设置了inline-block元素才出现的空白间距。标签img默认是inline元素（内联元素，行内元素），计算高度时要加上line-height的默认值（4px）。<br>7月19号<br>实在还是做不出来，于是我找了相关的css博客开发，看看博客搭建的思路</p>
 <p>css3实战-扁平化博客开发笔记<br>nav ul<br>{ list-style: none;}<br>nav ul li<br>{ display: inline-block;}<br>nav ul li a<br>{ display: inherit;<br>padding: 6px 20px;}这里就是继承了上面的inline-block的属性。<br>h1<br>{ margin: 0;}/这里和4px差不多因此要消除。<br>自己开始跟着写。一遍不行就写三遍，三遍不行，就写5遍，知道自己背出来。<br>sublime快捷键的使用<br>列表：<br>（li&gt;a{item$})*4<br>如何快速写。的快捷键是什么？<br>当给nav设置背景色的时候为什么没有显示呢？<br>因为nav内部的元素都是浮动的，瘫缩了，因此要清除浮动。<br>而清除浮动的代码为：<br>.clearfix:before,<br>.clearfix:after {<br>content:” “;<br>display:table;<br>clear:both;}<br>这里值得注意的是要加上clear:both才有效果。然而视频中并没有写出来仍旧可以显示效果，我不理解。参考链结：<a href="http://stackoverflow.com/questions/27501912/why-is-my-clearfix-not-working-in-firefox/27502178#27502178" target="_blank" rel="external">http://stackoverflow.com/questions/27501912/why-is-my-clearfix-not-working-in-firefox/27502178#27502178</a><br>这里应该也是一个比较大的知识点。<br>8月25日<br>继续扁平化博客。笔记。</p>
 <p>写注释的快捷键是什么？<br>整理一下灰色的深浅度的。有什么共同点和不同点。<br>logo容器和ul容器明明就是在同一层，但是在调整logo的padding属性的时候，ul容器掉下来了，为此使用box-sizing。即：</p>
-<ul>
-<li>{<br>  -webkit-box-sizing: border-box;<br>  -moz-box-sizing: border-box;<br>  box-sizing: border-box;<br>}<br>这样就没有问题了。<br>li{item$}<br>即为<pre><code>      &lt;li&gt;item1&lt;/li&gt;
-       &lt;li&gt;item2&lt;/li&gt;
-       &lt;li&gt;item3&lt;/li&gt;
-       &lt;li&gt;item4&lt;/li&gt;
-</code></pre>遇到的问题是:background: url(路径)。这个在上次应用中并没有起到作用，因此我就在想是不是chrome浏览器不支持。但是9月1号，再试的时候又完全没有问题了。纳闷中更多的是开心。<br>background-size: cover;即是覆盖原背景图。<br>class=“inner_header article”这是在HTML中<br>.inner_header.article    注意这里中间并没有空格，表示的是一个类既叫inner_header又叫article。如果中间有空格则表示，类inner_header下的类article。完全是不一样的概念。<br>在sublime里，css和html来回切换的快捷键是什么？<br>ctrl+tab。<br>看了一遍css命名规范，最好不要用下划线命名，而采用中横线。</li>
-</ul>
+<pre><code>    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+</code></pre><p>这样就没有问题了。<br>li{item$}<br>即为<br>        <li>item1</li><br>         <li>item2</li><br>         <li>item3</li><br>         <li>item4</li><br>遇到的问题是:background: url(路径)。这个在上次应用中并没有起到作用，因此我就在想是不是chrome浏览器不支持。但是9月1号，再试的时候又完全没有问题了。纳闷中更多的是开心。<br>background-size: cover;即是覆盖原背景图。<br>class=“inner_header article”这是在HTML中<br>.inner_header.article    注意这里中间并没有空格，表示的是一个类既叫inner_header又叫article。如果中间有空格则表示，类inner_header下的类article。完全是不一样的概念。<br>在sublime里，css和html来回切换的快捷键是什么？<br>ctrl+tab。<br>看了一遍css命名规范，最好不要用下划线命名，而采用中横线。</p>
 <p>9月1号<br>再次尝试task0001任务。虽然理解了一些，但是很多对于现在的我来说，还是觉得困难，我不知道是因为我被困难吓倒了，所以每次开始编写代码的时候，都会有点力不从心，有点不愿意的感觉。<br>总结，关于github链接的问题，<a href="tang-yue.github.io"></a>这个链接是错误的。而必须写成<a href="http://tang-yue.github.io"></a>这样才可以。<br>遇到同样的问题，就是如何让菜单栏既向右浮动，又使其底部距离header为5px。</p>
 <p>不止一次遇到，sublime会延迟反应，每次出现错误，改了好多，才显示想要的效果，但是返回上一步，和刚才的一样，并不会显示错误。so，重点是我不知道哪里出错了，这个让我很苦恼呀。<br>9月1号21:14点，content的第一部分完成，没有遇到什么太大的问题。总算过来了。</p>
 <p>9月2号遇到的问题，就是如何让三个木块的高度一致，又让它们的高度自适应内容，这个应该如何布局?结果是用.post { margin: 10px 0 -10000px;padding-bottom: 10000px}同时，总的div应该清除浮动，还有就是padding没有负值，而margin有负值。因此是不能够颠倒的。</p>
