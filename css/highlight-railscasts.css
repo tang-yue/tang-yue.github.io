@@ -104,3 +104,13 @@ Railscasts-like style (c) Visoft, Inc. (Damien White)
 .hljs-link {
   text-decoration: underline;
 }
+code {
+  font-family: Consolas, Monaco, Courier New, Lucida Console;
+  background-color: #ddd;
+  font-style: italic;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+table .line {
+  font-family: Consolas, Monaco, Courier New, Lucida Console;
+}
