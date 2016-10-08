@@ -17,13 +17,15 @@
   
   
     <meta name="description" content="15js运动视频不愿意删除注释代码笔记15js运动基础1
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Document&lt;/title&gt;
-&lt;style&gt;
-#div1 {widt...">
+~~~&lt;!DOCTYPE html&gt;
+
+
+
+Document
+
+#div1 {width: 200px; height: 200px; background: red; position: absolute;}
+#btn1 {margin: 0;}
+    window.onload=function() {       ...">
   
   <title>js运动总结 [ 醉眼天涯 ]</title>
   
@@ -113,51 +115,20 @@
     </p>
     
     <h3 id="15js运动视频"><a href="#15js运动视频" class="headerlink" title="15js运动视频"></a>15js运动视频</h3><p>不愿意删除注释代码笔记<br><strong>15js运动基础1</strong></p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Document&lt;/title&gt;
-&lt;style&gt;
-#div1 {width: 200px; height: 200px; background: red; position: absolute;}
-#btn1 {margin: 0;}
-&lt;/style&gt;
-&lt;script&gt;
-    window.onload=function() {
-        var oDiv=document.getElementById(&#39;div1&#39;);
-        var oBtn=document.getElementById(&#39;btn1&#39;);
-        var timer=null;
-         //null的值表示一个空对象指针，只要意在保存对象的变量还没有真正保存对象，就应该明确地让该变量保存null值。
-        oBtn.onclick=function() 
-        {    
-            var oDiv=document.getElementById(&#39;div1&#39;);
-            clearInterval(timer);
-         //下面返回也是一个定时器对象。但是为什么要把它，放在按钮点击事件的外面，这里我不清楚。
-            timer=setInterval(function() 
-            {
-                if(oDiv.offsetLeft&gt;=300)
-                {
-                    clearInterval(timer);
-                }
-                else
-                {  
-              oDiv.style.left=oDiv.offsetLeft+1+&quot;px&quot;;
-               }
-            },30);
-            //alert(oDiv.offsetLeft);//弹出值为8，刚开始的时候为8
-        }
-    }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;input  id=&quot;btn1&quot; type=&quot;button&quot; value=&quot;开始运动&quot;&gt;
-&lt;div id=&quot;div1&quot;&gt;&lt;/div&gt;    
-&lt;/body&gt;
-&lt;/html&gt;
-&lt;!-- 在oncilkc里我要把div再选择一次。
+<p>~~~&lt;!DOCTYPE html&gt;</p>
+<p><html lang="en"></html></p>
+<p><head></head></p>
+<p><meta charset="UTF-8"></p>
+<p><title>Document</title></p>
+<p><style></p>
+<p>#div1 {width: 200px; height: 200px; background: red; position: absolute;}</p>
+<p>#btn1 {margin: 0;}<br></style></p>
+<p><script><br>    window.onload=function() {<br>        var oDiv=document.getElementById(‘div1’);<br>        var oBtn=document.getElementById(‘btn1’);<br>        var timer=null;<br>         //null的值表示一个空对象指针，只要意在保存对象的变量还没有真正保存对象，就应该明确地让该变量保存null值。<br>        oBtn.onclick=function()<br>        {<br>            var oDiv=document.getElementById(‘div1’);<br>            clearInterval(timer);<br>         //下面返回也是一个定时器对象。但是为什么要把它，放在按钮点击事件的外面，这里我不清楚。<br>            timer=setInterval(function()<br>            {<br>                if(oDiv.offsetLeft&gt;=300)<br>                {<br>                    clearInterval(timer);<br>                }<br>                else<br>                {<br>              oDiv.style.left=oDiv.offsetLeft+1+”px”;<br>               }<br>            },30);<br>            //alert(oDiv.offsetLeft);//弹出值为8，刚开始的时候为8<br>        }<br>    }<br></script><br></p>
+<p><body></body></p>
+<p><input id="btn1" type="button" value="开始运动"></p>
+<p><div id="div1"></div><br><br><br><!-- 在oncilkc里我要把div再选择一次。
 我操作的时候明明代码是正确的为什么，停不下来呢？？原来按钮本身有个margin，因此在300的时候并不会停，而在318的时候才会停， 我明明已经把先把定时器给关了，为什么还是出现问题，这个出现问题还真是有点多啊.已经解决问题。var timer=null;这行代码我没有把它放在点击事件的外面，而是放在了里面，请问这个究竟是起到什么作用呢？？
-找书去了。--&gt;
-</code></pre><p><a href="http://jsrun.net/kipKp/result/light" target="_blank" rel="external">效果展示</a><br>说明：点击按钮。<br><strong>15js淡入淡出2</strong></p>
+找书去了。-->~~~<br><a href="http://jsrun.net/kipKp/result/light" target="_blank" rel="external">效果展示</a><br>说明：点击按钮。<br><strong>15js淡入淡出2</strong></p>
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
