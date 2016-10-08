@@ -1,0 +1,566 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="author" content="Tang Yue">
+  
+  
+  
+  
+    <meta name="description" content="15js运动视频不愿意删除注释代码笔记15js运动基础1
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;style&gt;
+#div1 {widt...">
+  
+  <title>js运动总结 [ 醉眼天涯 ]</title>
+  
+    <link rel="alternate" href="/atom.xml" title="醉眼天涯">
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+  <link rel="stylesheet" href="/css/random.css">
+<link rel="stylesheet" href="/css/vegas.min.css">
+<link rel="stylesheet" href="/css/highlight-railscasts.css">
+<link rel="stylesheet" href="/css/jquery.fancybox.css">
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+<link rel="stylesheet" href="/css/jquery.fancybox-thumbs.css">
+<link rel="stylesheet" href="/css/plyr.css">
+  
+</head>
+
+<body>
+<div class="side-navigate hide-area">
+  
+  
+    <div class="item next">
+      <a href="/2016-09/task0001问题总结.html">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        task0001问题总结
+      </div>
+    </div>
+  
+</div>
+<div id="container" class="hide-area">
+  <div id="menu-outer" class="slide-down">
+    <div id="menu-inner">
+      <div id="brand">
+        
+        <a onClick="openUserCard()">
+          <img id="avatar" src="/images/avatar.jpg"/>
+          <div id="homelink">醉眼天涯</div>
+        </a>
+      </div>
+      <div id="menu-list">
+        <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/archives">文章</a></li>
+        
+          <li><a href="/tags">标签</a></li>
+        
+          <li><a href="/categories">分类</a></li>
+        
+          <li><a href="/about">关于</a></li>
+        
+        </ul>
+      </div>
+      <div id="show-menu">
+        <button>Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="content-outer">
+    <div id="content-inner">
+      
+      
+    <article id="post">
+    <h1>js运动总结</h1>
+    <p class="page-title-sub">
+      <span id = "post-title-date">撰写于 2016-10-08</span>
+      
+        <span id = "post-title-updated">修改于 2016-10-08</span>
+      
+      
+      <span id = "post-title-categories">分类
+      
+      
+        
+        
+        <a href="/categories/编程技术/">编程技术</a>
+      
+      </span>
+      
+      
+    </p>
+    
+    <h3 id="15js运动视频"><a href="#15js运动视频" class="headerlink" title="15js运动视频"></a>15js运动视频</h3><p>不愿意删除注释代码笔记<br><strong>15js运动基础1</strong></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;style&gt;
+#div1 {width: 200px; height: 200px; background: red; position: absolute;}
+#btn1 {margin: 0;}
+&lt;/style&gt;
+&lt;script&gt;
+    window.onload=function() {
+        var oDiv=document.getElementById(&#39;div1&#39;);
+        var oBtn=document.getElementById(&#39;btn1&#39;);
+        var timer=null;
+         //null的值表示一个空对象指针，只要意在保存对象的变量还没有真正保存对象，就应该明确地让该变量保存null值。
+        oBtn.onclick=function() 
+        {    
+            var oDiv=document.getElementById(&#39;div1&#39;);
+            clearInterval(timer);
+         //下面返回也是一个定时器对象。但是为什么要把它，放在按钮点击事件的外面，这里我不清楚。
+            timer=setInterval(function() 
+            {
+                if(oDiv.offsetLeft&gt;=300)
+                {
+                    clearInterval(timer);
+                }
+                else
+                {  
+              oDiv.style.left=oDiv.offsetLeft+1+&quot;px&quot;;
+               }
+            },30);
+            //alert(oDiv.offsetLeft);//弹出值为8，刚开始的时候为8
+        }
+    }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;input  id=&quot;btn1&quot; type=&quot;button&quot; value=&quot;开始运动&quot;&gt;
+&lt;div id=&quot;div1&quot;&gt;&lt;/div&gt;    
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;!-- 在oncilkc里我要把div再选择一次。
+我操作的时候明明代码是正确的为什么，停不下来呢？？原来按钮本身有个margin，因此在300的时候并不会停，而在318的时候才会停， 我明明已经把先把定时器给关了，为什么还是出现问题，这个出现问题还真是有点多啊.已经解决问题。var timer=null;这行代码我没有把它放在点击事件的外面，而是放在了里面，请问这个究竟是起到什么作用呢？？
+找书去了。--&gt;
+</code></pre><p><a href="http://jsrun.net/kipKp/result/light" target="_blank" rel="external">效果展示</a><br>说明：点击按钮。<br><strong>15js淡入淡出2</strong></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;style&gt;
+#div1 {width: 200px; height: 200px; background: red; position: absolute; top: 20px; left: 20px; filter: alpha(opacity:30); opacity: 0.3;}
+&lt;/style&gt;
+&lt;script&gt;
+window.onload=function() {
+    var oDiv=document.getElementById(&#39;div1&#39;);
+    oDiv.onmouseover=function() {
+        startMove(100);
+    }
+    oDiv.onmouseout=function()   {
+        startMove(30);
+    }
+}
+    var alpha=30;
+    var timer=null;
+    function startMove(iTarget) {
+        var oDiv=document.getElementById(&#39;div1&#39;);
+         clearInterval(timer);
+        var speed;
+        if(iTarget&gt;alpha) {
+            speed=10;
+        }
+        else
+        {
+            speed=-10;
+        }
+         timer=setInterval(function () 
+        {
+            if(alpha==iTarget)
+            {
+                clearInterval(timer);
+            }
+            else
+            {   
+               alpha=alpha+speed;
+               oDiv.style.filter=&#39;alpha(opacity:&#39;+alpha+speed+&#39;)&#39;;
+                oDiv.style.opacity=alpha/100;
+             }
+        },30);
+    }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;div1&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;!-- 基本上没有什么大问题的做完了 --&gt;
+</code></pre><p><a href="http://jsrun.net/YipKp/result/light" target="_blank" rel="external">效果展示</a><br>说明：鼠标移进移出，透明度变化。<br><strong>15js分享到侧边栏3</strong></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;style&gt;
+#div1 { width: 100px; height: 200px; background: green; position: absolute; top: 50px; left: -100px; }
+#div1 span { width: 20px; background: blue; position: absolute; top: 70px; right: -20px; line-height: 20px;}
+&lt;/style&gt;
+&lt;script&gt;
+window.onload=function() {
+    var oDiv=document.getElementById(&#39;div1&#39;);
+    oDiv.onmouseover=function() {
+        startMove(0);
+    }
+    oDiv.onmouseout=function() {
+        startMove(-100);
+    }
+}
+    var timer=null;
+    function startMove(iTarget) {
+        var oDiv=document.getElementById(&#39;div1&#39;);
+        clearInterval(timer);
+        var speed;
+        if(iTarget&gt;oDiv.offsetLeft)
+        {
+            speed=10;
+        }
+        else
+        {
+            speed=-10;
+        }
+        timer=setInterval(function() {
+            if(oDiv.offsetLeft==iTarget)
+            {
+                clearInterval(timer);
+            }
+            else
+            {   
+            oDiv.style.left=oDiv.offsetLeft+speed+&#39;px&#39;;
+            }
+        },30);
+    }
+    // function startMove2(speed,iTarget) {
+    //     var oDiv=document.getElementById(&#39;div1&#39;);
+    //     clearInterval(timer);
+    //     timer=setInterval(function() {
+    //         if(oDiv.offsetLeft==iTarget)
+    //         {
+    //             clearInterval(timer);
+    //         }
+    //         else
+    //         {   
+    //         oDiv.style.left=oDiv.offsetLeft+speed+&#39;px&#39;;
+    //         }
+
+    //     },30);
+    // }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;div1&quot;&gt;
+    &lt;span&gt;分享到&lt;/span&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;!-- 分析如何合并两个statMove
+当我left为0，目标值为-100时，speed为负
+当我left为-100，目标值为0时，speed为正 --&gt;
+</code></pre><p><a href="http://jsrun.net/iipKp/result/light" target="_blank" rel="external">效果展示</a><br>说明:鼠标移进，移出。<br><strong>16js缓冲运动1</strong></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;style&gt;
+#div1 {width: 100px; height: 100px; background: red; position: absolute; top: 50px; left: 0px;}
+#div2 { width: 1px; height: 300px; background: black; position: absolute; top: 50px; left: 300px; }
+#btn1 {margin: 0;}
+&lt;/style&gt;
+&lt;script&gt;
+window.onload=function() {
+    var oBtn=document.getElementById(&#39;btn1&#39;);
+    oBtn.onclick=function() {
+        startMove(300);
+    }
+}
+    var timer=null;
+    function startMove(iTarget) {
+        var oDiv=document.getElementById(&#39;div1&#39;);
+        clearInterval(timer);
+        timer=setInterval( function() {  
+            var speed=(iTarget-oDiv.offsetLeft)/10;
+             //speed=speed&gt;0?Math.ceil(speed):Math.floor(speed);
+            oDiv.style.left=oDiv.offsetLeft+speed+&#39;px&#39;;
+            document.title=oDiv.offsetLeft+&quot;,&quot;+speed;
+            alert(oDiv.style.left);//最后弹出的值为296.4px
+        },30);
+    }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;input id=&quot;btn1&quot; type=&quot;button&quot; value=&quot;开始运动&quot;&gt;
+&lt;div id=&quot;div1&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;div2&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+ &lt;!-- oDiv.style.left=oDiv.offsetLeft+speed+&#39;px&#39;;
+ 分析，并没有到达目的地。
+ 最后的offsetLeft为596   而速度为0.4.
+ 然而计算机会直接等于596.4，这里转不过弯来了。但是我记得答案继续向下写。
+ 纵然我不理解但是结果还是对的。
+ 再次看视频，改成300。
+ oDiv.style.left=oDiv.offsetLeft+speed+&#39;px&#39;;
+ 此时left是296加上速度的0.4为296.4，虽然弹出的对话框为296.4但是计算机会忽略掉小数位，进而left仍旧为296.没有变，因此div不动了。
+ Math.ceil(3.5) 向上取整为4
+ Math.floor(3.4)向下取整为3
+ Math.floor(-3.4) 向下取整为-4
+ 即当speed为正数时，向上取整，当speed为负数时，向下取整。
+ 问题解决。
+--&gt;
+</code></pre><p><a href="http://jsrun.net/hipKp/result/light" target="_blank" rel="external">效果展示</a><br>说明:点击按钮。<br><strong>16js右侧悬浮框2</strong></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Document&lt;/title&gt;
+&lt;style&gt;
+#div1 {width: 100px; height: 150px; background: red; position: absolute; bottom: 0; right: 0;}
+&lt;/style&gt;
+&lt;script&gt;
+    window.onscroll=function() {
+        var oDiv=document.getElementById(&#39;div1&#39;);
+        var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+        //oDiv.style.top=document.documentElement.clientHeight-oDiv.offsetHeight+scrollTop+&#39;px&#39;;
+        startMove(document.documentElement.clientHeight-oDiv.offsetHeight+scrollTop);
+    }
+    var timer=null;
+    function startMove(iTarget) {
+        var oDiv=document.getElementById(&#39;div1&#39;);
+        clearInterval(timer);
+        timer=setInterval(function() {
+            var speed;
+            speed=(iTarget-oDiv.offsetTop)/10;
+            speed=speed&gt;0?Math.ceil(speed):Math.floor(speed);
+            oDiv.style.top=oDiv.offsetTop+speed+&#39;px&#39;;
+        },30);
+    }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body style=&quot;height: 3000px;&quot;&gt;
+&lt;div id=&quot;div1&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;!-- 问题一不清楚div1的绝对定位。还有scrollTop的值，有点记不清，其余感觉没什么问题 。有个严重的问题是，我把offsetTop写成了offsetHeight。这个问题基于我还是会死记过程，而不懂得理解，其实这根本就是两个不同的概念，offsetTop是动态的，而offsetHeight是静态的，是固定的，这个有很大的区别。--&gt;
+</code></pre><p><a href="http://jsrun.net/XipKp/result/light" target="_blank" rel="external">效果展示</a></p>
+
+  </article>
+
+  
+<nav id="pagination">
+  
+
+  
+
+  
+    <a href="/2016-09/task0001问题总结.html" class="next">下一篇 task0001问题总结 &rarr;</a>
+  
+</nav>
+
+
+      
+      <div class="ds-thread" data-thread-key="2016-10/js-sport-summary.html" data-title="js运动总结" data-url="http://tang-yue.github.io/2016-10/js-sport-summary.html"></div>
+      
+      
+      
+    </div>
+  </div>
+
+  <div id="bottom-outer">
+    <div id="bottom-inner">
+      Site by Tang Yue using
+      <a href="http://hexo.io">Hexo</a> & <a href="https://github.com/stiekel/hexo-theme-random">Random</a>
+      <br>
+      
+        &copy;
+        
+
+        2016
+        
+      
+    </div>
+  </div>
+  </div>
+
+</div>
+
+  <script type="text/javascript">
+var duoshuoQuery = {short_name:"tang-yue"};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0] 
+   || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+
+
+
+<div id="user-card">
+  <div class="center-field">
+    <img class="avatar" src="/images/avatar.jpg">
+    <p id="description">后来很多人问我一个人夜晚踟蹰路上的心情，我想起的却不是孤单与路长，而是波澜壮阔的海和天空中闪耀的星光。</p>
+    <ul class="social-icon">
+  
+  
+    <li>
+      <a href="https://github.com/tang-yue">
+        
+          <i class="icon iconfont github">&#xe606;</i>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://weibo.com/tangyue1129">
+        
+          <i class="icon iconfont weibo">&#xe602;</i>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.douban.com/people/tangyue1129/">
+        
+          <i class="icon iconfont douban">&#xe609;</i>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.zhihu.com/people/tang-yue-35">
+        
+          <i class="icon iconfont zhihu">&#xe60b;</i>  
+        
+      </a>
+    </li>
+  
+</ul>
+  </div>
+</div>
+
+
+<div id="btn-view">Hide</div>
+
+
+
+
+
+  
+  
+    <script src="/js/jquery-2.2.3.min.js"></script>
+  
+    <script src="/js/vegas.min.js"></script>
+  
+    <script src="/js/random.js"></script>
+  
+    <script src="/js/highlight.pack.js"></script>
+  
+    <script src="/js/jquery.mousewheel.pack.js"></script>
+  
+    <script src="/js/jquery.fancybox.pack.js"></script>
+  
+    <script src="/js/jquery.fancybox-thumbs.js"></script>
+  
+    <script src="/js/plyr.js"></script>
+  
+
+<script>
+
+  // fancybox
+  var backgroundImages = [];
+  
+    
+      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_1.jpg?imageView2/1/w/__width__/h/__height__');
+    
+      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_2.jpg?imageView2/1/w/__width__/h/__height__');
+    
+      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_3.jpg?imageView2/1/w/__width__/h/__height__');
+    
+      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_4.jpg?imageView2/1/w/__width__/h/__height__');
+    
+      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_5.jpg?imageView2/1/w/__width__/h/__height__');
+    
+  
+  $('#post').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox') || $(this).parent().hasClass('fancybox-thumb')) return;
+      var alt = this.alt || this.title;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'post' + i);
+    });
+  });
+  $(".fancybox").fancybox();
+
+var vegasConfig = {"preload­Image":true,"transition":["slideLeft2","slideRight2","flash2"],"timer":true,"delay":5000,"shuffle":true,"count":28};
+var unsplashConfig = {"gravity":"north"};
+
+$(".fancybox-thumb").fancybox({
+  prevEffect: 'none',
+  nextEffect: 'none',
+  helpers: {
+    title: {
+      type: 'outside'
+    },
+    thumbs: {
+      width: 50,
+      height: 50
+    }
+  }
+});
+
+// show video with plyr
+$(".video-container iframe").each(function(i){
+  var url = $(this).attr('src');
+  var id = url.split('/').pop();
+  var plyrContainer = document.createElement('div');
+  plyrContainer.className = 'plyr';
+  var plyrElement = document.createElement('div');
+  plyrElement.dataset.videoId = id;
+  switch(true) {
+    case url.search('youtube.com') >= 0:
+      plyrElement.dataset.type = 'youtube';
+      break;
+    case url.search('vimeo.com') >= 0:
+      plyrElement.dataset.type = 'vimeo';
+      break;
+    default:
+      return;
+  };
+  plyrContainer.appendChild(plyrElement);
+  $(this).parent().html(plyrContainer);
+});
+plyr.setup('.plyr', {iconUrl: '/css/sprite.svg'});
+</script>
+</body>
+</html>
+
