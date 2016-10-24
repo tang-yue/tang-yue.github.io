@@ -68,7 +68,7 @@
       <div id="brand">
         
         <a onClick="openUserCard()">
-          <img id="avatar" src="/images/avatar.jpg"/>
+          <img id="avatar" src="http://7te9fe.com1.z0.glb.clouddn.com/default_avatar.jpg"/>
           <div id="homelink">醉眼天涯</div>
         </a>
       </div>
@@ -123,7 +123,7 @@
     <div id="content-inner">
       
       
-    <article id="post">
+  <article id="post">
     <h1>6月9日至9月9日前端学习记录过程</h1>
     <p class="page-title-sub">
       <span id = "post-title-date">撰写于 2016-09-09</span>
@@ -164,6 +164,14 @@
 <p>7月17日至9月9号<br>中间基本没学习。<br>9月1号至9号。<br>百度前端学院的作业task0001里任务七。从暑假把头部看别人写的，自己尝试的写好了代码。并且因为实在是无从下手，在csdn学院找了一个扁平化博客开发的视频，自己跟着写，并记了笔记。9月9号上午完成博客的结尾。下午上传github，并整理暑假以来的一些随笔，放到博客里。下面我要做一个ppt上台演讲，我想做的好一点。</p>
 
   </article>
+  <div class="random-toc-area">
+  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">显示目录</button>
+  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">隐藏目录</button>
+  <div class="random-toc">
+    <h2>目录</h2>
+    
+  </div>
+</div>
 
   
 <nav id="pagination">
@@ -177,6 +185,10 @@
     <a href="/2016-07/git入门以及hexo的常用命令.html" class="next">下一篇 搭建博客的相关 &rarr;</a>
   
 </nav>
+
+  <!-- JiaThis Button BEGIN -->
+
+<!-- JiaThis Button END -->
 
 
       
@@ -245,7 +257,7 @@ var duoshuoQuery = {short_name:"tang-yue"};
     <li>
       <a href="https://www.douban.com/people/tangyue1129/">
         
-          <i class="icon iconfont douban">&#xe609;</i>
+          <i class="icon iconfont douban">&#xe60f;</i>
         
       </a>
     </li>
@@ -253,7 +265,7 @@ var duoshuoQuery = {short_name:"tang-yue"};
     <li>
       <a href="https://www.zhihu.com/people/tang-yue-35">
         
-          <i class="icon iconfont zhihu">&#xe60b;</i>  
+          <i class="icon iconfont zhihu">&#xe60b;</i>
         
       </a>
     </li>
@@ -265,6 +277,19 @@ var duoshuoQuery = {short_name:"tang-yue"};
 
 <div id="btn-view">Hide</div>
 
+<script>
+// is trigger analytics / tongji script
+var isIgnoreHost = false;
+
+if(window && window.location && window.location.host) {
+  isIgnoreHost = ["localhost","127.0.0.1"].some(function(address){
+    return 0 === window.location.host.indexOf(address);
+  });
+}
+
+var isTriggerAnalytics = !( true && isIgnoreHost );
+
+</script>
 
 
 
@@ -293,18 +318,6 @@ var duoshuoQuery = {short_name:"tang-yue"};
   // fancybox
   var backgroundImages = [];
   
-    
-      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_1.jpg?imageView2/1/w/__width__/h/__height__');
-    
-      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_2.jpg?imageView2/1/w/__width__/h/__height__');
-    
-      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_3.jpg?imageView2/1/w/__width__/h/__height__');
-    
-      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_4.jpg?imageView2/1/w/__width__/h/__height__');
-    
-      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_5.jpg?imageView2/1/w/__width__/h/__height__');
-    
-  
   $('#post').each(function(i){
     $(this).find('img').each(function(){
       if ($(this).parent().hasClass('fancybox') || $(this).parent().hasClass('fancybox-thumb')) return;
@@ -320,6 +333,15 @@ var duoshuoQuery = {short_name:"tang-yue"};
 
 var vegasConfig = {"preload­Image":true,"transition":["slideLeft2","slideRight2","flash2"],"timer":true,"delay":5000,"shuffle":true,"count":28};
 var unsplashConfig = {"gravity":"north"};
+// is show background images
+var turnoffBackgroundImage = false;
+
+
+
+  turnoffBackgroundImage = true;
+
+
+var backgroundColor = "34495E";
 
 $(".fancybox-thumb").fancybox({
   prevEffect: 'none',
@@ -360,3 +382,4 @@ plyr.setup('.plyr', {iconUrl: '/css/sprite.svg'});
 </script>
 </body>
 </html>
+

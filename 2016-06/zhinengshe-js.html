@@ -70,7 +70,7 @@
       <div id="brand">
         
         <a onClick="openUserCard()">
-          <img id="avatar" src="/images/avatar.jpg"/>
+          <img id="avatar" src="http://7te9fe.com1.z0.glb.clouddn.com/default_avatar.jpg"/>
           <div id="homelink">醉眼天涯</div>
         </a>
       </div>
@@ -125,7 +125,7 @@
     <div id="content-inner">
       
       
-    <article id="post">
+  <article id="post">
     <h1>zhinengshe-js</h1>
     <p class="page-title-sub">
       <span id = "post-title-date">撰写于 2016-06-12</span>
@@ -155,6 +155,14 @@
 <p>遇到的问题：托管在github上的代码，如何查看运行结果。其实这种想法是错误的，如果你只是把运行结果看成是静态的而不是动态的，完全可以在博客的源文件里放入静态的图片，然后点击跳转图片链接。但是貌似链接的路径存在问题。但是总觉得动态的无法实现，至少就我自己目前而已。</p>
 
   </article>
+  <div class="random-toc-area">
+  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">显示目录</button>
+  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">隐藏目录</button>
+  <div class="random-toc">
+    <h2>目录</h2>
+    
+  </div>
+</div>
 
   
 <nav id="pagination">
@@ -168,6 +176,10 @@
     <a href="/2016-06/4月28日至6月9日前端学习记录过程.html" class="next">下一篇 4月28日至6月9日学习前端记录过程 &rarr;</a>
   
 </nav>
+
+  <!-- JiaThis Button BEGIN -->
+
+<!-- JiaThis Button END -->
 
 
       
@@ -236,7 +248,7 @@ var duoshuoQuery = {short_name:"tang-yue"};
     <li>
       <a href="https://www.douban.com/people/tangyue1129/">
         
-          <i class="icon iconfont douban">&#xe609;</i>
+          <i class="icon iconfont douban">&#xe60f;</i>
         
       </a>
     </li>
@@ -244,7 +256,7 @@ var duoshuoQuery = {short_name:"tang-yue"};
     <li>
       <a href="https://www.zhihu.com/people/tang-yue-35">
         
-          <i class="icon iconfont zhihu">&#xe60b;</i>  
+          <i class="icon iconfont zhihu">&#xe60b;</i>
         
       </a>
     </li>
@@ -256,6 +268,19 @@ var duoshuoQuery = {short_name:"tang-yue"};
 
 <div id="btn-view">Hide</div>
 
+<script>
+// is trigger analytics / tongji script
+var isIgnoreHost = false;
+
+if(window && window.location && window.location.host) {
+  isIgnoreHost = ["localhost","127.0.0.1"].some(function(address){
+    return 0 === window.location.host.indexOf(address);
+  });
+}
+
+var isTriggerAnalytics = !( true && isIgnoreHost );
+
+</script>
 
 
 
@@ -284,18 +309,6 @@ var duoshuoQuery = {short_name:"tang-yue"};
   // fancybox
   var backgroundImages = [];
   
-    
-      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_1.jpg?imageView2/1/w/__width__/h/__height__');
-    
-      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_2.jpg?imageView2/1/w/__width__/h/__height__');
-    
-      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_3.jpg?imageView2/1/w/__width__/h/__height__');
-    
-      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_4.jpg?imageView2/1/w/__width__/h/__height__');
-    
-      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_5.jpg?imageView2/1/w/__width__/h/__height__');
-    
-  
   $('#post').each(function(i){
     $(this).find('img').each(function(){
       if ($(this).parent().hasClass('fancybox') || $(this).parent().hasClass('fancybox-thumb')) return;
@@ -311,6 +324,15 @@ var duoshuoQuery = {short_name:"tang-yue"};
 
 var vegasConfig = {"preload­Image":true,"transition":["slideLeft2","slideRight2","flash2"],"timer":true,"delay":5000,"shuffle":true,"count":28};
 var unsplashConfig = {"gravity":"north"};
+// is show background images
+var turnoffBackgroundImage = false;
+
+
+
+  turnoffBackgroundImage = true;
+
+
+var backgroundColor = "34495E";
 
 $(".fancybox-thumb").fancybox({
   prevEffect: 'none',
@@ -351,3 +373,4 @@ plyr.setup('.plyr', {iconUrl: '/css/sprite.svg'});
 </script>
 </body>
 </html>
+

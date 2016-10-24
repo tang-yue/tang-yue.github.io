@@ -57,7 +57,7 @@
       <div id="brand">
         
         <a onClick="openUserCard()">
-          <img id="avatar" src="/images/avatar.jpg"/>
+          <img id="avatar" src="http://7te9fe.com1.z0.glb.clouddn.com/default_avatar.jpg"/>
           <div id="homelink">醉眼天涯</div>
         </a>
       </div>
@@ -112,7 +112,7 @@
     <div id="content-inner">
       
       
-    <article id="post">
+  <article id="post">
     <h1>recent thingking</h1>
     <p class="page-title-sub">
       <span id = "post-title-date">撰写于 2016-10-10</span>
@@ -137,6 +137,14 @@
 <p>最近会有一个感觉，我的时间都去哪儿了，为什么别人的技术学的比你好，看的书也比你的多。过去的几年我的时间花在哪了？当你饱满热情学习的时候，有时你会想到以前没有学习而无聊的时光是多么的浪费，所以有个不产生后悔的法子，就是你一直都非常的努力，非常的努力，非常的努力。当然这根本就做不到。就我个人来说，学习会有一段时间松，一段时间紧这样的模式，反正我是这样，不知道别人什么感觉。我也是最近才保持这样的学习时间，然而学习时间都是可以一步一步锻炼，就好似乎养成良好习惯一样，不是说养成良好习惯要坚持一个月，就可以养成的。从累到感觉不累，再次没有感觉，形成一种固定的模式成为你生命，生活的一部分，一样暂时就和吃饭同等地位的事情，过程中需要一步一步的挑战过去的自己。最近手机里放了乔布斯斯坦福的演讲，还是很激励人的。</p>
 
   </article>
+  <div class="random-toc-area">
+  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">显示目录</button>
+  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">隐藏目录</button>
+  <div class="random-toc">
+    <h2>目录</h2>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于最近的一些思考"><span class="toc-text">关于最近的一些思考</span></a></li></ol>
+  </div>
+</div>
 
   
 <nav id="pagination">
@@ -148,6 +156,10 @@
     <a href="/2016-10/js-sport-summary.html" class="next">下一篇 js运动总结 &rarr;</a>
   
 </nav>
+
+  <!-- JiaThis Button BEGIN -->
+
+<!-- JiaThis Button END -->
 
 
       
@@ -216,7 +228,7 @@ var duoshuoQuery = {short_name:"tang-yue"};
     <li>
       <a href="https://www.douban.com/people/tangyue1129/">
         
-          <i class="icon iconfont douban">&#xe609;</i>
+          <i class="icon iconfont douban">&#xe60f;</i>
         
       </a>
     </li>
@@ -224,7 +236,7 @@ var duoshuoQuery = {short_name:"tang-yue"};
     <li>
       <a href="https://www.zhihu.com/people/tang-yue-35">
         
-          <i class="icon iconfont zhihu">&#xe60b;</i>  
+          <i class="icon iconfont zhihu">&#xe60b;</i>
         
       </a>
     </li>
@@ -236,6 +248,19 @@ var duoshuoQuery = {short_name:"tang-yue"};
 
 <div id="btn-view">Hide</div>
 
+<script>
+// is trigger analytics / tongji script
+var isIgnoreHost = false;
+
+if(window && window.location && window.location.host) {
+  isIgnoreHost = ["localhost","127.0.0.1"].some(function(address){
+    return 0 === window.location.host.indexOf(address);
+  });
+}
+
+var isTriggerAnalytics = !( true && isIgnoreHost );
+
+</script>
 
 
 
@@ -264,18 +289,6 @@ var duoshuoQuery = {short_name:"tang-yue"};
   // fancybox
   var backgroundImages = [];
   
-    
-      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_1.jpg?imageView2/1/w/__width__/h/__height__');
-    
-      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_2.jpg?imageView2/1/w/__width__/h/__height__');
-    
-      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_3.jpg?imageView2/1/w/__width__/h/__height__');
-    
-      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_4.jpg?imageView2/1/w/__width__/h/__height__');
-    
-      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_5.jpg?imageView2/1/w/__width__/h/__height__');
-    
-  
   $('#post').each(function(i){
     $(this).find('img').each(function(){
       if ($(this).parent().hasClass('fancybox') || $(this).parent().hasClass('fancybox-thumb')) return;
@@ -291,6 +304,15 @@ var duoshuoQuery = {short_name:"tang-yue"};
 
 var vegasConfig = {"preload­Image":true,"transition":["slideLeft2","slideRight2","flash2"],"timer":true,"delay":5000,"shuffle":true,"count":28};
 var unsplashConfig = {"gravity":"north"};
+// is show background images
+var turnoffBackgroundImage = false;
+
+
+
+  turnoffBackgroundImage = true;
+
+
+var backgroundColor = "34495E";
 
 $(".fancybox-thumb").fancybox({
   prevEffect: 'none',
@@ -331,3 +353,4 @@ plyr.setup('.plyr', {iconUrl: '/css/sprite.svg'});
 </script>
 </body>
 </html>
+

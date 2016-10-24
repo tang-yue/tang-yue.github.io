@@ -68,7 +68,7 @@ git config –global http.proxy 127.0.0.1:1080
       <div id="brand">
         
         <a onClick="openUserCard()">
-          <img id="avatar" src="/images/avatar.jpg"/>
+          <img id="avatar" src="http://7te9fe.com1.z0.glb.clouddn.com/default_avatar.jpg"/>
           <div id="homelink">醉眼天涯</div>
         </a>
       </div>
@@ -123,7 +123,7 @@ git config –global http.proxy 127.0.0.1:1080
     <div id="content-inner">
       
       
-    <article id="post">
+  <article id="post">
     <h1>网络管制问题</h1>
     <p class="page-title-sub">
       <span id = "post-title-date">撰写于 2016-09-09</span>
@@ -151,6 +151,14 @@ git config –global http.proxy 127.0.0.1:1080
 <p><a href="https://www.zhihu.com/question/20732532" target="_blank" rel="external">知乎的相关解答</a></p>
 
   </article>
+  <div class="random-toc-area">
+  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">显示目录</button>
+  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">隐藏目录</button>
+  <div class="random-toc">
+    <h2>目录</h2>
+    
+  </div>
+</div>
 
   
 <nav id="pagination">
@@ -164,6 +172,10 @@ git config –global http.proxy 127.0.0.1:1080
     <a href="/2016-09/6月9日至9月9日杂事心情日志.html" class="next">下一篇 6月9日至9月9日杂事心情日志 &rarr;</a>
   
 </nav>
+
+  <!-- JiaThis Button BEGIN -->
+
+<!-- JiaThis Button END -->
 
 
       
@@ -232,7 +244,7 @@ var duoshuoQuery = {short_name:"tang-yue"};
     <li>
       <a href="https://www.douban.com/people/tangyue1129/">
         
-          <i class="icon iconfont douban">&#xe609;</i>
+          <i class="icon iconfont douban">&#xe60f;</i>
         
       </a>
     </li>
@@ -240,7 +252,7 @@ var duoshuoQuery = {short_name:"tang-yue"};
     <li>
       <a href="https://www.zhihu.com/people/tang-yue-35">
         
-          <i class="icon iconfont zhihu">&#xe60b;</i>  
+          <i class="icon iconfont zhihu">&#xe60b;</i>
         
       </a>
     </li>
@@ -252,6 +264,19 @@ var duoshuoQuery = {short_name:"tang-yue"};
 
 <div id="btn-view">Hide</div>
 
+<script>
+// is trigger analytics / tongji script
+var isIgnoreHost = false;
+
+if(window && window.location && window.location.host) {
+  isIgnoreHost = ["localhost","127.0.0.1"].some(function(address){
+    return 0 === window.location.host.indexOf(address);
+  });
+}
+
+var isTriggerAnalytics = !( true && isIgnoreHost );
+
+</script>
 
 
 
@@ -280,18 +305,6 @@ var duoshuoQuery = {short_name:"tang-yue"};
   // fancybox
   var backgroundImages = [];
   
-    
-      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_1.jpg?imageView2/1/w/__width__/h/__height__');
-    
-      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_2.jpg?imageView2/1/w/__width__/h/__height__');
-    
-      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_3.jpg?imageView2/1/w/__width__/h/__height__');
-    
-      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_4.jpg?imageView2/1/w/__width__/h/__height__');
-    
-      backgroundImages.push('http://7te9fe.com1.z0.glb.clouddn.com/bgimg_5.jpg?imageView2/1/w/__width__/h/__height__');
-    
-  
   $('#post').each(function(i){
     $(this).find('img').each(function(){
       if ($(this).parent().hasClass('fancybox') || $(this).parent().hasClass('fancybox-thumb')) return;
@@ -307,6 +320,15 @@ var duoshuoQuery = {short_name:"tang-yue"};
 
 var vegasConfig = {"preload­Image":true,"transition":["slideLeft2","slideRight2","flash2"],"timer":true,"delay":5000,"shuffle":true,"count":28};
 var unsplashConfig = {"gravity":"north"};
+// is show background images
+var turnoffBackgroundImage = false;
+
+
+
+  turnoffBackgroundImage = true;
+
+
+var backgroundColor = "34495E";
 
 $(".fancybox-thumb").fancybox({
   prevEffect: 'none',
@@ -347,3 +369,4 @@ plyr.setup('.plyr', {iconUrl: '/css/sprite.svg'});
 </script>
 </body>
 </html>
+
