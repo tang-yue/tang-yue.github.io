@@ -1,0 +1,376 @@
+
+
+<h1></h1>
+
+<h1></h1>
+
+<h1></h1>
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="author" content="Tang Yue">
+  
+  
+  
+  
+    <meta name="description" content="Introducing Regular Expressions** 学习正则表达式书籍的笔记
+github托管本书的代码网址本书网址Facebook地址twitterYoutube地址
+介绍一个网站我发现在书里可以发现很多不错的网站。正则表达式： 是描述一组字符串特征的模式，用来匹配特定的的字符串。书写的两种风格：JS风格   ——–new RegExp()perl风格  ——-/a/i
+字...">
+  
+  <title>introducing-regular-expressions [ 醉眼天涯 ]</title>
+  
+    <link rel="alternate" href="/atom.xml" title="醉眼天涯">
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+  <link rel="stylesheet" href="/css/random.css">
+<link rel="stylesheet" href="/css/vegas.min.css">
+<link rel="stylesheet" href="/css/highlight-railscasts.css">
+<link rel="stylesheet" href="/css/jquery.fancybox.css">
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+<link rel="stylesheet" href="/css/jquery.fancybox-thumbs.css">
+<link rel="stylesheet" href="/css/plyr.css">
+  
+</head>
+
+<body>
+<div class="side-navigate hide-area">
+  
+  
+    <div class="item next">
+      <a href="/2016-10/recent-thingking.html">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        recent thingking
+      </div>
+    </div>
+  
+</div>
+<div id="outer-container" class="hide-area">
+<div id="container">
+  <div id="menu-outer" class="slide-down">
+    <div id="menu-inner">
+      <div id="brand">
+        
+        <a onClick="openUserCard()">
+          <img id="avatar" src="http://o8gasf88j.bkt.clouddn.com/avatar.jpg"/>
+          <div id="homelink">醉眼天涯</div>
+        </a>
+      </div>
+      <div id="menu-list">
+        <ul>
+        
+        
+          
+            <li>
+          
+            <a href="/index.html">home</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/archives">archives</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/about">about</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/categories">categories</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/tags">tags</a>
+            
+          </li>
+        
+        </ul>
+      </div>
+      <div id="show-menu">
+        <button>Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="content-outer">
+    <div id="content-inner">
+      
+      
+  <article id="post">
+    <h1>introducing-regular-expressions</h1>
+    <p class="page-title-sub">
+      <span id = "post-title-date">Created at 2016-11-09</span>
+      
+        <span id = "post-title-updated">Updated at 2016-11-09</span>
+      
+      
+      <span id = "post-title-categories">Category
+      
+      
+        
+        
+        <a href="/categories/编程技术/">编程技术</a>
+      
+      </span>
+      
+      
+    </p>
+    
+    <h3 id="Introducing-Regular-Expressions"><a href="#Introducing-Regular-Expressions" class="headerlink" title="Introducing Regular Expressions"></a>Introducing Regular Expressions</h3><p>** 学习正则表达式书籍的笔记</p>
+<p>github<br><a href="https://github.com/michaeljamesfitzgerald/Introducing-Regular-Expressions" target="_blank" rel="external">托管本书的代码网址</a><br><a href="http://oreil/intro_regex" target="_blank" rel="external">本书网址</a><br><a href="http：//facebook.com/oreilly">Facebook地址</a><br><a href="http://twitter.com/oreillymedia" target="_blank" rel="external">twitter</a><br><a href="http：//www.youtube.com/oreillymedia">Youtube地址</a></p>
+<p><a href="http：//www.regexpal.com">介绍一个网站</a><br>我发现在书里可以发现很多不错的网站。<br>正则表达式： 是描述一组字符串特征的模式，用来匹配特定的的字符串。<br>书写的两种风格：<br>JS风格   <code>——–new RegExp()</code><br>perl风格  <code>——-/a/i</code></p>
+<p>字符串字面值： 字面上看起来是什么就是什么。<br>元字符/保留字符：正则表达式中的方括号<br><code>[abc]pc</code>:表示a,b,c 任选一个，即可以代表apc或bpc或cpc<br><code>[0-9]</code>:称做字符组/字符集<br><code>\d</code>: 重复三次和四次就可以匹配三个和四个数字。<br><code>\D</code>: 它匹配任何一个非数字字符。<br><code>&lt;[<em>a-zA-Z][^&gt;]*&gt;</em></code>:匹配HTML或XHL标签<br>该表达式解释：<br>第一个字符是左尖括号<br>在XML中元素可以以下划线字符（）开头，而在HTML中是以ASCII范围中的大小写字母开头<br>在起始字符之后，标签名称可以是零或多个除右尖括号（&gt;）之外的任意字符。<br>该表达式以右尖括号结尾</p>
+<p>量词：<br>包含数字的花括号是一种量词。</p>
+<p><code>(/d)/d/1</code><br>解释：（\d）匹配第一个数字并将其捕获。<br>       \d  匹配第二个数字<br>       \1  对捕获的数字进行反向引用</p>
+<ul>
+<li>:表示一个或多个</li>
+</ul>
+<ul>
+<li>:表示零个或多个<br>? :表示零个或一个<br>匹配特定的次数<br><code>{n}</code>        精确匹配n次<br><code>{n,}</code>       匹配n次或更多次<br><code>{m,n}</code>      匹配m次至更多次<br><code>{0,1}</code>      与？相同（零次或一次）<br><code>{1,0}</code>      与+相同（一次或更多次）<br><code>{0,}</code>       与*相同（零次或更多）</li>
+</ul>
+<p><code>（\d{3,4}[.-]?）+</code><br>解释：括号里的模式出现一次多次，括号里的模式匹配三位或四位数字，后跟一个连字符或一个点号。<br><code>（\d{3}[.-]?）{2}\d{4}</code><br>这个表达式匹配的字符是连续两个无括号的三位数字，每三位数字后可以带连字符也可以不带，最后是一个四位数字。<br>符号<code>^</code>表示：字符组取反，不匹配这些，匹配除这些以外的内容：<br><code>[^\d]   [^0-9]  \D</code>     作用完全相同<br><code>\w</code>:只匹配字母、数字、下划线。</p>
+<p><code>\D</code>:只会匹配空格、标点符号（引号、连字符、反斜杠、方括号）等字符</p>
+<p><code>[_a-zA-Z0-9]</code>   <code>\w</code> 作用相同<br><code>[^_a-zA-Z0-9]</code> <code>\W</code>   作用相同</p>
+<p><code>\s</code>:匹配空白字符 与[\t\n\r]的作用相同。<br>空格<br>制表符 <code>(\t)</code><br>换行符 <code>(\n)</code><br>回车符 <code>(\r)</code></p>
+<p>边界<br><code>\b</code>:匹配单词边界<br><code>^</code>:匹配行或字符串的起始<br><code>$</code>:匹配行或字符串的结尾</p>
+
+  </article>
+  <div class="random-toc-area">
+  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">Show TOC</button>
+  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">Hide TOC</button>
+  <div class="random-toc">
+    <h2>Table of Content</h2>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Introducing-Regular-Expressions"><span class="toc-text">Introducing Regular Expressions</span></a></li></ol>
+  </div>
+</div>
+
+  
+<nav id="pagination">
+  
+
+  
+
+  
+    <a href="/2016-10/recent-thingking.html" class="next">Next post recent thingking &rarr;</a>
+  
+</nav>
+
+  <!-- JiaThis Button BEGIN -->
+
+<!-- JiaThis Button END -->
+
+
+      
+      <div class="ds-thread" data-thread-key="2016-11/introducing-regular-expressions.html" data-title="introducing-regular-expressions" data-url="http://tang-yue.github.io/2016-11/introducing-regular-expressions.html"></div>
+      
+      
+      
+    </div>
+  </div>
+
+  <div id="bottom-outer">
+    <div id="bottom-inner">
+      Site by Tang Yue using
+      <a href="http://hexo.io">Hexo</a> & <a href="https://github.com/stiekel/hexo-theme-random">Random</a>
+      <br>
+      
+        &copy;
+        
+
+        2016
+        
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  <script type="text/javascript">
+var duoshuoQuery = {short_name:"tang-yue"};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0] 
+   || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+
+
+
+<div id="user-card">
+  <div class="center-field">
+    <img class="avatar" src="http://o8gasf88j.bkt.clouddn.com/avatar.jpg">
+    <p id="description">后来很多人问我一个人夜晚踟蹰路上的心情，我想起的却不是孤单与路长，而是波澜壮阔的海和天空中闪耀的星光。</p>
+    <ul class="social-icon">
+  
+  
+    <li>
+      <a href="https://github.com/tang-yue">
+        
+          <i class="icon iconfont github">&#xe606;</i>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://weibo.com/tangyue1129">
+        
+          <i class="icon iconfont weibo">&#xe602;</i>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.douban.com/people/tangyue1129/">
+        
+          <i class="icon iconfont douban">&#xe60f;</i>
+        
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.zhihu.com/people/tang-yue-35">
+        
+          <i class="icon iconfont zhihu">&#xe60b;</i>
+        
+      </a>
+    </li>
+  
+</ul>
+  </div>
+</div>
+
+
+<div id="btn-view">Hide</div>
+
+<script>
+// is trigger analytics / tongji script
+var isIgnoreHost = false;
+
+if(window && window.location && window.location.host) {
+  isIgnoreHost = ["localhost","127.0.0.1"].some(function(address){
+    return 0 === window.location.host.indexOf(address);
+  });
+}
+
+var isTriggerAnalytics = !( true && isIgnoreHost );
+
+</script>
+
+
+
+
+  
+  
+    <script src="/js/jquery-2.2.3.min.js"></script>
+  
+    <script src="/js/vegas.min.js"></script>
+  
+    <script src="/js/random.js"></script>
+  
+    <script src="/js/highlight.pack.js"></script>
+  
+    <script src="/js/jquery.mousewheel.pack.js"></script>
+  
+    <script src="/js/jquery.fancybox.pack.js"></script>
+  
+    <script src="/js/jquery.fancybox-thumbs.js"></script>
+  
+    <script src="/js/plyr.js"></script>
+  
+
+<script>
+
+  // fancybox
+  var backgroundImages = [];
+  
+  $('#post').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox') || $(this).parent().hasClass('fancybox-thumb')) return;
+      var alt = this.alt || this.title;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'post' + i);
+    });
+  });
+  $(".fancybox").fancybox();
+
+var vegasConfig = {"preload­Image":true,"transition":["slideLeft2","slideRight2","flash2"],"timer":true,"delay":5000,"shuffle":true,"count":28};
+var unsplashConfig = {"gravity":"north"};
+// is show background images
+var turnoffBackgroundImage = false;
+
+
+
+  turnoffBackgroundImage = true;
+
+
+var backgroundColor = "34495E";
+
+$(".fancybox-thumb").fancybox({
+  prevEffect: 'none',
+  nextEffect: 'none',
+  helpers: {
+    title: {
+      type: 'outside'
+    },
+    thumbs: {
+      width: 50,
+      height: 50
+    }
+  }
+});
+
+// show video with plyr
+$(".video-container iframe").each(function(i){
+  var url = $(this).attr('src');
+  var id = url.split('/').pop();
+  var plyrContainer = document.createElement('div');
+  plyrContainer.className = 'plyr';
+  var plyrElement = document.createElement('div');
+  plyrElement.dataset.videoId = id;
+  switch(true) {
+    case url.search('youtube.com') >= 0:
+      plyrElement.dataset.type = 'youtube';
+      break;
+    case url.search('vimeo.com') >= 0:
+      plyrElement.dataset.type = 'vimeo';
+      break;
+    default:
+      return;
+  };
+  plyrContainer.appendChild(plyrElement);
+  $(this).parent().html(plyrContainer);
+});
+plyr.setup('.plyr', {iconUrl: '/css/sprite.svg'});
+</script>
+</body>
+</html>
+
