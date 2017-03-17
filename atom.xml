@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tang-yue.github.io/"/>
-  <updated>2017-02-18T11:51:57.886Z</updated>
+  <updated>2017-03-17T12:13:32.152Z</updated>
   <id>http://tang-yue.github.io/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C-language</title>
+    <link href="http://tang-yue.github.io/2017-03/C-language.html"/>
+    <id>http://tang-yue.github.io/2017-03/C-language.html</id>
+    <published>2017-03-17T01:52:52.000Z</published>
+    <updated>2017-03-17T12:13:32.152Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;C-language&quot;&gt;&lt;a href=&quot;#C-language&quot; class=&quot;headerlink&quot; title=&quot;C language&quot;&gt;&lt;/a&gt;C language&lt;/h3&gt;&lt;p&gt;这是C语言&lt;/p&gt;
+&lt;p&gt;我自己整理的笔记,页数太多,不好写成博客,还是放在word文档里吧。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://pan.baidu.com/s/1eRUCg3w&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;百度网盘分享链接&lt;/a&gt;密码：wavx&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;C-language&quot;&gt;&lt;a href=&quot;#C-language&quot; class=&quot;headerlink&quot; title=&quot;C language&quot;&gt;&lt;/a&gt;C language&lt;/h3&gt;&lt;p&gt;这是C语言&lt;/p&gt;
+&lt;p&gt;我自己整理的笔记,页数太多,不好写成博客,还是放在
+    
+    </summary>
+    
+      <category term="编程技术" scheme="http://tang-yue.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>introducing-regular-expressions</title>
@@ -863,34 +887,6 @@ function startMove(obj,attr,iTarget) {
   
   <entry>
     <title>task0001问题总结</title>
-    <link href="http://tang-yue.github.io/2016-09/task0002%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93.html"/>
-    <id>http://tang-yue.github.io/2016-09/task0002问题总结.html</id>
-    <published>2016-09-16T11:11:38.000Z</published>
-    <updated>2017-02-21T00:52:08.727Z</updated>
-    
-    <content type="html">&lt;h3 id=&quot;task0002问题总结&quot;&gt;&lt;a href=&quot;#task0002问题总结&quot; class=&quot;headerlink&quot; title=&quot;task0002问题总结&quot;&gt;&lt;/a&gt;task0002问题总结&lt;/h3&gt;&lt;h2 id=&quot;javascript的性能优化-加载和执行&quot;&gt;&lt;a href=&quot;#javascript的性能优化-加载和执行&quot; class=&quot;headerlink&quot; title=&quot;javascript的性能优化: 加载和执行&quot;&gt;&lt;/a&gt;javascript的性能优化: 加载和执行&lt;/h2&gt;&lt;p&gt;由于脚本会阻塞页面的其他资源的下载，因此推荐所有的&lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;标签尽可能放到&lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;标签的底部,以尽量减少对整个页面下载的影响。&lt;br&gt;&lt;strong&gt; 减少JavaScript对性能的影响有以下几种方法: &lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1. 将所有的`&amp;lt;script&amp;gt;`标签放到页面的底部，也就是`&amp;lt;/body&amp;gt;`闭合标签之前，这能确保在脚本执行前页面已经完成了渲染。
-2. 尽可能地合并脚本。页面中的`&amp;lt;script&amp;gt;`标签越少，加载也就越快，响应也就越迅速。无论是外链脚本还是内嵌脚本都是如此。
-3. 采用无阻塞下载JavaScript脚本的方法
-    * 使用`&amp;lt;script&amp;gt;`标签的defer属性(仅适用于IE和Firefox3.5以上版本);
-    * 使用动态创建的`&amp;lt;script&amp;gt;`元素来下载并执行代码
-    * 使用XHR对象下载JavaScript代码并注入页面中。
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;任务2-1-判断arr是否是数组，判断function是否是函数&quot;&gt;&lt;a href=&quot;#任务2-1-判断arr是否是数组，判断function是否是函数&quot; class=&quot;headerlink&quot; title=&quot;任务2.1  判断arr是否是数组，判断function是否是函数&quot;&gt;&lt;/a&gt;任务2.1  判断arr是否是数组，判断function是否是函数&lt;/h2&gt;&lt;p&gt;github util.js文件写的比较详细了&lt;br&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000006150186&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考文献&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;任务2-2-用递归实现深度克隆&quot;&gt;&lt;a href=&quot;#任务2-2-用递归实现深度克隆&quot; class=&quot;headerlink&quot; title=&quot;任务2.2 用递归实现深度克隆&quot;&gt;&lt;/a&gt;任务2.2 用递归实现深度克隆&lt;/h2&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;task0002问题总结&quot;&gt;&lt;a href=&quot;#task0002问题总结&quot; class=&quot;headerlink&quot; title=&quot;task0002问题总结&quot;&gt;&lt;/a&gt;task0002问题总结&lt;/h3&gt;&lt;h2 id=&quot;javascript的性能优化-加载和执行&quot;&gt;&lt;a
-    
-    </summary>
-    
-      <category term="编程技术" scheme="http://tang-yue.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>task0001问题总结</title>
     <link href="http://tang-yue.github.io/2016-09/task0001%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93.html"/>
     <id>http://tang-yue.github.io/2016-09/task0001问题总结.html</id>
     <published>2016-09-16T11:11:38.000Z</published>
@@ -955,6 +951,34 @@ color: #fff;
     <summary type="html">
     
       &lt;h3 id=&quot;task0001问题总结&quot;&gt;&lt;a href=&quot;#task0001问题总结&quot; class=&quot;headerlink&quot; title=&quot;task0001问题总结&quot;&gt;&lt;/a&gt;task0001问题总结&lt;/h3&gt;&lt;p&gt;index页面遇到的问题：&lt;br&gt;如何让实际内容是980px
+    
+    </summary>
+    
+      <category term="编程技术" scheme="http://tang-yue.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>task0001问题总结</title>
+    <link href="http://tang-yue.github.io/2016-09/task0002%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93.html"/>
+    <id>http://tang-yue.github.io/2016-09/task0002问题总结.html</id>
+    <published>2016-09-16T11:11:38.000Z</published>
+    <updated>2017-02-21T00:52:08.727Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;task0002问题总结&quot;&gt;&lt;a href=&quot;#task0002问题总结&quot; class=&quot;headerlink&quot; title=&quot;task0002问题总结&quot;&gt;&lt;/a&gt;task0002问题总结&lt;/h3&gt;&lt;h2 id=&quot;javascript的性能优化-加载和执行&quot;&gt;&lt;a href=&quot;#javascript的性能优化-加载和执行&quot; class=&quot;headerlink&quot; title=&quot;javascript的性能优化: 加载和执行&quot;&gt;&lt;/a&gt;javascript的性能优化: 加载和执行&lt;/h2&gt;&lt;p&gt;由于脚本会阻塞页面的其他资源的下载，因此推荐所有的&lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;标签尽可能放到&lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;标签的底部,以尽量减少对整个页面下载的影响。&lt;br&gt;&lt;strong&gt; 减少JavaScript对性能的影响有以下几种方法: &lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 将所有的`&amp;lt;script&amp;gt;`标签放到页面的底部，也就是`&amp;lt;/body&amp;gt;`闭合标签之前，这能确保在脚本执行前页面已经完成了渲染。
+2. 尽可能地合并脚本。页面中的`&amp;lt;script&amp;gt;`标签越少，加载也就越快，响应也就越迅速。无论是外链脚本还是内嵌脚本都是如此。
+3. 采用无阻塞下载JavaScript脚本的方法
+    * 使用`&amp;lt;script&amp;gt;`标签的defer属性(仅适用于IE和Firefox3.5以上版本);
+    * 使用动态创建的`&amp;lt;script&amp;gt;`元素来下载并执行代码
+    * 使用XHR对象下载JavaScript代码并注入页面中。
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;任务2-1-判断arr是否是数组，判断function是否是函数&quot;&gt;&lt;a href=&quot;#任务2-1-判断arr是否是数组，判断function是否是函数&quot; class=&quot;headerlink&quot; title=&quot;任务2.1  判断arr是否是数组，判断function是否是函数&quot;&gt;&lt;/a&gt;任务2.1  判断arr是否是数组，判断function是否是函数&lt;/h2&gt;&lt;p&gt;github util.js文件写的比较详细了&lt;br&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000006150186&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考文献&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;任务2-2-用递归实现深度克隆&quot;&gt;&lt;a href=&quot;#任务2-2-用递归实现深度克隆&quot; class=&quot;headerlink&quot; title=&quot;任务2.2 用递归实现深度克隆&quot;&gt;&lt;/a&gt;任务2.2 用递归实现深度克隆&lt;/h2&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;task0002问题总结&quot;&gt;&lt;a href=&quot;#task0002问题总结&quot; class=&quot;headerlink&quot; title=&quot;task0002问题总结&quot;&gt;&lt;/a&gt;task0002问题总结&lt;/h3&gt;&lt;h2 id=&quot;javascript的性能优化-加载和执行&quot;&gt;&lt;a
     
     </summary>
     
@@ -1162,7 +1186,7 @@ color: #fff;
     
     <content type="html">&lt;h3 id=&quot;git入门&quot;&gt;&lt;a href=&quot;#git入门&quot; class=&quot;headerlink&quot; title=&quot;git入门&quot;&gt;&lt;/a&gt;git入门&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;安装git&lt;/strong&gt;&lt;br&gt;去&lt;a href=&quot;https://git-scm.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Git&lt;/a&gt;官网下载。&lt;br&gt;安装成功后，在开始菜单里找到“Git”-&amp;gt;”Git Bash”,蹦出一个类似命令行的窗口的东西，就说明Git安装成功。&lt;br&gt;安装完成后设置：命令行输入：&lt;br&gt;&lt;code&gt;git config –global user.name”Your Name”&lt;/code&gt;&lt;br&gt;&lt;code&gt;git config –global user.email”email@example.com”&lt;/code&gt;&lt;br&gt;&lt;strong&gt;创建版本库&lt;/strong&gt;&lt;br&gt;&lt;code&gt;git init&lt;/code&gt;命令，初始化一个Git仓库。&lt;br&gt;&lt;code&gt;git add &amp;lt;file&amp;gt;&lt;/code&gt;可以添加多个文件。&lt;br&gt;&lt;code&gt;git commit -m &amp;quot;描述这个提交命令&amp;quot;&lt;/code&gt;完成。&lt;br&gt;&lt;strong&gt;时光机穿梭&lt;/strong&gt;&lt;br&gt;&lt;code&gt;git status&lt;/code&gt;查看仓库当前仓库的状况。&lt;br&gt;&lt;code&gt;git diff&lt;/code&gt;具体查看修改了什么内容。&lt;br&gt;&lt;strong&gt;版本回退&lt;/strong&gt;&lt;br&gt;&lt;code&gt;git log&lt;/code&gt;命令显示从最近到最远的提交日志。&lt;code&gt;git log --pretty=oneline&lt;/code&gt;显示的信息要少的多。&lt;br&gt;&lt;code&gt;git reset --hard HEAD^``HEAD&lt;/code&gt;表示当前版本，这个命令是回退到上一个版本。&lt;br&gt;&lt;code&gt;cat &amp;lt;file&amp;gt;&lt;/code&gt;查看文件内容&lt;br&gt;&lt;code&gt;git reset --hard commit id(版本号只要写前几位就可以了)&lt;/code&gt;&lt;br&gt;列如&lt;code&gt;git reset --hard 3628164&lt;/code&gt;即可回到指定的版本。&lt;br&gt;必须要记得commit id。&lt;code&gt;git reflog&lt;/code&gt;查看命令历史，以便要回到未来的那个版本。&lt;br&gt;&lt;code&gt;git log&lt;/code&gt;可以查看提交历史，以便确定要回退到哪个版本。&lt;br&gt;&lt;strong&gt;工作区和暂存区&lt;/strong&gt;&lt;br&gt;工作区:就是你在电脑里能看到的目录，比如我的learngit文件夹就是一个工作区。&lt;br&gt;&lt;code&gt;git add&lt;/code&gt;把文件添加进去，实际上就是把文件修改添加到暂存区;&lt;br&gt;&lt;code&gt;git commit&lt;/code&gt;提交更改，实际上就是把暂存区的所有内容提交到当前分支。&lt;br&gt;&lt;strong&gt;撤销修改&lt;/strong&gt;&lt;br&gt;&lt;code&gt;git checkout -- file&lt;/code&gt;改动了工作区的某个文件的内容，直接丢掉工作区的修改。&lt;br&gt;&lt;code&gt;git reset HEAD file&lt;/code&gt;回到上一步，按上一步的操作来。&lt;br&gt;最后如果已经提交了不适合的修改到版本库时，想要撤销本次提交，参考版本回退，不过没有推送到远程库。&lt;br&gt;&lt;strong&gt;删除文件&lt;/strong&gt;&lt;br&gt;&lt;code&gt;git rm &amp;lt;file&amp;gt;&lt;/code&gt;用于删除一个文件,并且&lt;code&gt;git commit&lt;/code&gt;文件从版本库中被删除。&lt;br&gt;&lt;code&gt;git checkout -- test.txt&lt;/code&gt;用于删错文件,版本库里还有，一键还原。&lt;br&gt;&lt;strong&gt;添加远程库&lt;/strong&gt;&lt;br&gt;在本地的learngit仓库下运行命令：&lt;br&gt;&lt;code&gt;git remote add origin https://github.com/tang-yue/zhinengshe.git&lt;/code&gt;&lt;br&gt;注意这里origin会被占用，所以要换用其他的才可以成功添加。&lt;br&gt;&lt;code&gt;git push -u origin master&lt;/code&gt;把本地库的所有内容推送到远程库上。&lt;br&gt;&lt;code&gt;git push origin master&lt;/code&gt;推送最新修改。&lt;br&gt;&lt;strong&gt;克隆一个远程仓库&lt;/strong&gt;&lt;br&gt;&lt;code&gt;git clone https://github.com/tang-yue/gitskills.git&lt;/code&gt;进入gitskills目录下就有github上的文件了。&lt;br&gt;&lt;strong&gt;使用github&lt;/strong&gt;&lt;br&gt;在github上，可以Fork开源仓库;自己拥有Fork后的仓库的读写权限;可以推送pull request给官方仓库来贡献代码。&lt;br&gt;&lt;strong&gt;创建与合并分支&lt;/strong&gt;&lt;br&gt;&lt;code&gt;git branch&lt;/code&gt;查看分支&lt;br&gt;&lt;code&gt;git branch &amp;lt;name&amp;gt;&lt;/code&gt;创建分支&lt;br&gt;&lt;code&gt;git checkout &amp;lt;name&amp;gt;&lt;/code&gt;切换分支&lt;br&gt;&lt;code&gt;git checkout -b &amp;lt;name&amp;gt;&lt;/code&gt;创建+切换分支&lt;br&gt;&lt;code&gt;git merge &amp;lt;name&amp;gt;&lt;/code&gt;合并某分支到当前分支&lt;br&gt;&lt;code&gt;git branch -d &amp;lt;name&amp;gt;&lt;/code&gt;删除分支&lt;br&gt;&lt;strong&gt;解决冲突&lt;/strong&gt;&lt;br&gt;当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。用&lt;code&gt;git log --graph&lt;/code&gt;命令可以看到分支合并图。&lt;br&gt;&lt;strong&gt;参考链接&lt;/strong&gt;&lt;br&gt;&lt;a href=&quot;http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;廖雪峰Git教程&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;hexo的常用命令&quot;&gt;&lt;a href=&quot;#hexo的常用命令&quot; class=&quot;headerlink&quot; title=&quot;hexo的常用命令&quot;&gt;&lt;/a&gt;hexo的常用命令&lt;/h3&gt;&lt;p&gt;&lt;code&gt;hexo clean&lt;/code&gt;清理database和/public目录，/public目录里是生成的静态文件数据。&lt;br&gt;&lt;code&gt;hexo generaet&lt;/code&gt;简写是”hexo g”命令是用来生成静态页面的 会创建/public目录静态页面数据都在这个文件夹里。&lt;br&gt;&lt;code&gt;hexo deploy&lt;/code&gt;一键部署命令上面在_config.yml文件中配置了部署信息，这个命令一键部署。&lt;br&gt;&lt;code&gt;npm install hexo-deployer-git --save&lt;/code&gt;##安装部署所需要的插件&lt;br&gt;&lt;code&gt;npm install hexo-server --save&lt;/code&gt;##安装server插件&lt;br&gt;&lt;code&gt;hexo n &amp;quot;my post&amp;quot;&lt;/code&gt;新建文章&lt;br&gt;&lt;code&gt;hexo new page &amp;quot;pageName&amp;quot;&lt;/code&gt;新建页面&lt;br&gt;&lt;strong&gt;参考链接&lt;/strong&gt;&lt;br&gt;&lt;a href=&quot;http://www.mashiro.io/2015/09/hexo-guide-3/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo系列教程&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://ibruce.info/2013/11/22/hexo-your-blog/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo你的博客&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.shijinrong.cn/2016/01/03/2016-01-03-how-to-build-blog/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo搭建博客&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;markdown语法&quot;&gt;&lt;a href=&quot;#markdown语法&quot; class=&quot;headerlink&quot; title=&quot;markdown语法&quot;&gt;&lt;/a&gt;markdown语法&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;建立代码块&lt;/strong&gt;：建立代码区块只要简单地缩进4个空格或是一个制表符即可。&lt;br&gt;&lt;strong&gt;邮箱&lt;/strong&gt;:&lt;a href=&quot;&amp;#x6d;&amp;#97;&amp;#105;&amp;#x6c;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#x74;&amp;#x61;&amp;#110;&amp;#x67;&amp;#x5f;&amp;#121;&amp;#117;&amp;#x65;&amp;#64;&amp;#102;&amp;#x6f;&amp;#120;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#46;&amp;#99;&amp;#111;&amp;#x6d;&quot;&gt;&amp;#x74;&amp;#x61;&amp;#110;&amp;#x67;&amp;#x5f;&amp;#121;&amp;#117;&amp;#x65;&amp;#64;&amp;#102;&amp;#x6f;&amp;#120;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#46;&amp;#99;&amp;#111;&amp;#x6d;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;markdown语法&quot;&gt;&lt;a href=&quot;#markdown语法&quot; class=&quot;headerlink&quot; title=&quot;markdown语法&quot;&gt;&lt;/a&gt;markdown语法&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;建立代码块&lt;/strong&gt;：建立代码区块只要简单地缩进4个空格或是一个制表符即可。&lt;br&gt;&lt;strong&gt;邮箱&lt;/strong&gt;:&lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#116;&amp;#x6f;&amp;#x3a;&amp;#116;&amp;#x61;&amp;#x6e;&amp;#x67;&amp;#x5f;&amp;#121;&amp;#x75;&amp;#x65;&amp;#x40;&amp;#x66;&amp;#x6f;&amp;#120;&amp;#109;&amp;#97;&amp;#105;&amp;#x6c;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#116;&amp;#x61;&amp;#x6e;&amp;#x67;&amp;#x5f;&amp;#121;&amp;#x75;&amp;#x65;&amp;#x40;&amp;#x66;&amp;#x6f;&amp;#120;&amp;#109;&amp;#97;&amp;#105;&amp;#x6c;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;/p&gt;
 &lt;!-- ![markdown语法速记](/../markdown.png)
  --&gt;
 &lt;p&gt; &lt;img src=&quot;http://o8gasf88j.bkt.clouddn.com/markdown.png&quot;&gt;&lt;br&gt;&lt;strong&gt;参考链接&lt;/strong&gt;&lt;br&gt;&lt;a href=&quot;http://i.cmgine.net/archives/12291.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;十分钟学会markdown&lt;/a&gt;&lt;/p&gt;
