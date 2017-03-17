@@ -19,10 +19,10 @@
   
   
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...">
+    <meta name="description" content="task0002问题总结javascript的性能优化: 加载和执行由于脚本会阻塞页面的其他资源的下载，因此推荐所有的&lt;script&gt;标签尽可能放到&lt;body&gt;标签的底部,以尽量减少对整个页面下载的影响。 减少JavaScript对性能的影响有以下几种方法: 
+1. 将所有的`&lt;script&gt;`标签放到页面的底部，也就是`&lt;/body&gt;`闭合标...">
   
-  <title>Hello World [ 醉眼天涯 ]</title>
+  <title>task0001问题总结 [ 醉眼天涯 ]</title>
   
     <link rel="alternate" href="/atom.xml" title="醉眼天涯">
   
@@ -44,14 +44,23 @@ Qu...">
 <div class="side-navigate hide-area">
   
     <div class="item prev">
-      <a href="/2016-06/我为什么学前端.html">
+      <a href="/2016-09/task0001问题总结.html">
         <div class="item-icon"></div>
       </a>
       <div class="item-title">
-        我为什么学前端
+        task0001问题总结
       </div>
     </div>
   
+  
+    <div class="item next">
+      <a href="/2016-09/王家卫电影风格演讲ppt制作.html">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        王家卫电影风格演讲ppt制作
+      </div>
+    </div>
   
 </div>
 <div id="outer-container" class="hide-area">
@@ -117,48 +126,54 @@ Qu...">
       
       
   <article id="post">
-    <h1>Hello World</h1>
+    <h1>task0001问题总结</h1>
     <p class="page-title-sub">
-      <span id = "post-title-date">Created at 2016-05-29</span>
+      <span id = "post-title-date">Created at 2016-09-16</span>
       
-        <span id = "post-title-updated">Updated at 2016-07-04</span>
+        <span id = "post-title-updated">Updated at 2017-02-21</span>
       
+      
+      <span id = "post-title-categories">Category
+      
+      
+        
+        
+        <a href="/categories/编程技术/">编程技术</a>
+      
+      </span>
       
       
     </p>
     
-    <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
+    <h3 id="task0002问题总结"><a href="#task0002问题总结" class="headerlink" title="task0002问题总结"></a>task0002问题总结</h3><h2 id="javascript的性能优化-加载和执行"><a href="#javascript的性能优化-加载和执行" class="headerlink" title="javascript的性能优化: 加载和执行"></a>javascript的性能优化: 加载和执行</h2><p>由于脚本会阻塞页面的其他资源的下载，因此推荐所有的<code>&lt;script&gt;</code>标签尽可能放到<code>&lt;body&gt;</code>标签的底部,以尽量减少对整个页面下载的影响。<br><strong> 减少JavaScript对性能的影响有以下几种方法: </strong></p>
+<pre><code>1. 将所有的`&lt;script&gt;`标签放到页面的底部，也就是`&lt;/body&gt;`闭合标签之前，这能确保在脚本执行前页面已经完成了渲染。
+2. 尽可能地合并脚本。页面中的`&lt;script&gt;`标签越少，加载也就越快，响应也就越迅速。无论是外链脚本还是内嵌脚本都是如此。
+3. 采用无阻塞下载JavaScript脚本的方法
+    * 使用`&lt;script&gt;`标签的defer属性(仅适用于IE和Firefox3.5以上版本);
+    * 使用动态创建的`&lt;script&gt;`元素来下载并执行代码
+    * 使用XHR对象下载JavaScript代码并注入页面中。
+</code></pre><h2 id="任务2-1-判断arr是否是数组，判断function是否是函数"><a href="#任务2-1-判断arr是否是数组，判断function是否是函数" class="headerlink" title="任务2.1  判断arr是否是数组，判断function是否是函数"></a>任务2.1  判断arr是否是数组，判断function是否是函数</h2><p>github util.js文件写的比较详细了<br><a href="https://segmentfault.com/a/1190000006150186" target="_blank" rel="external">参考文献</a></p>
+<h2 id="任务2-2-用递归实现深度克隆"><a href="#任务2-2-用递归实现深度克隆" class="headerlink" title="任务2.2 用递归实现深度克隆"></a>任务2.2 用递归实现深度克隆</h2>
   </article>
   <div class="random-toc-area">
   <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">Show TOC</button>
   <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">Hide TOC</button>
   <div class="random-toc">
     <h2>Table of Content</h2>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#task0002问题总结"><span class="toc-text">task0002问题总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#javascript的性能优化-加载和执行"><span class="toc-text">javascript的性能优化: 加载和执行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#任务2-1-判断arr是否是数组，判断function是否是函数"><span class="toc-text">任务2.1  判断arr是否是数组，判断function是否是函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#任务2-2-用递归实现深度克隆"><span class="toc-text">任务2.2 用递归实现深度克隆</span></a>
   </div>
 </div>
 
   
 <nav id="pagination">
   
-    <a href="/2016-06/我为什么学前端.html" class="prev">&larr; Prev post 我为什么学前端</a>
+    <a href="/2016-09/task0001问题总结.html" class="prev">&larr; Prev post task0001问题总结</a>
   
 
   
 
+  
+    <a href="/2016-09/王家卫电影风格演讲ppt制作.html" class="next">Next post 王家卫电影风格演讲ppt制作 &rarr;</a>
   
 </nav>
 
@@ -168,7 +183,7 @@ Qu...">
 
 
       
-      <div class="ds-thread" data-thread-key="2016-05/hello-world.html" data-title="Hello World" data-url="http://tang-yue.github.io/2016-05/hello-world.html"></div>
+      <div class="ds-thread" data-thread-key="2016-09/task0002问题总结.html" data-title="task0001问题总结" data-url="http://tang-yue.github.io/2016-09/task0002问题总结.html"></div>
       
       
       
