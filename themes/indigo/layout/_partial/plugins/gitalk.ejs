@@ -1,4 +1,22 @@
-<% if (theme.gitalk){ %>
+<%
+  // 优先从环境变量读取，如果不存在则使用配置文件中的值
+  var clientId = process.env.GITALK_CLIENT_ID || (theme.gitalk && theme.gitalk.client_id) || '';
+  var clientSecret = process.env.GITALK_CLIENT_SECRET || (theme.gitalk && theme.gitalk.client_secret) || '';
+  var owner = (theme.gitalk && theme.gitalk.owner) || '';
+  var repo = (theme.gitalk && theme.gitalk.repo) || '';
+
+  // 检查是否有有效的配置（至少需要有 clientId 和 clientSecret）
+  var hasValidConfig = clientId &&
+                      clientId.trim() !== '' &&
+                      clientId !== '# 需要填写你的 GitHub OAuth App Client ID' &&
+                      clientSecret &&
+                      clientSecret.trim() !== '' &&
+                      clientSecret !== '# 需要填写你的 GitHub OAuth App Client Secret' &&
+                      owner &&
+                      repo;
+
+  if (hasValidConfig) {
+%>
 <section class="comments" id="comments">
     <div id="gitalk-container"></div>
     <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
@@ -9,11 +27,11 @@
           id = location.pathname.replace(/\/\d+\/\d+\/\d+\//, '').replace('/', '').substring(0, 50)
         }
         const gitalk = new Gitalk({
-          clientID: '<%- theme.gitalk.client_id %>',
-          clientSecret: '<%- theme.gitalk.client_secret %>',
-          repo: '<%- theme.gitalk.repo %>',
-          owner: '<%- theme.gitalk.owner %>',
-          admin: ['<%- theme.gitalk.owner %>'],
+          clientID: '<%= clientId %>',
+          clientSecret: '<%= clientSecret %>',
+          repo: '<%= repo %>',
+          owner: '<%= owner %>',
+          admin: ['<%= owner %>'],
           id: id,      // Ensure uniqueness and length less than 50
           title: document.title.split('|')[0],
           distractionFreeMode: false  // Facebook-like distraction free mode
