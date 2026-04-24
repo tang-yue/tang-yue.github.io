@@ -110,16 +110,48 @@
                 headerH = header.clientHeight,
                 titles = $('#post-content').querySelectorAll('h1, h2, h3, h4, h5, h6');
 
-            toc.querySelector('a[href="#' + titles[0].id + '"]').parentNode.classList.add('active');
+            if (!titles || !titles.length) {
+                return {
+                    fixed: noop,
+                    actived: noop
+                }
+            }
+
+            // 仅用 href 与正文 h#id 对照（不拼 CSS 选择器，避免引号/编码差异导致匹配失败或 selector 抛错）
+            var findTocAnchor = function (el, id) {
+                    if (!el || !id) return null;
+                    var links = el.querySelectorAll('a.post-toc-link');
+                    for (var k = 0; k < links.length; k++) {
+                        var h = links[k].getAttribute('href');
+                        if (!h) continue;
+                        if (h.charAt(0) === '#') {
+                            var frag = h.slice(1);
+                            if (frag === id) return links[k];
+                            try {
+                                if (decodeURIComponent(frag) === id) return links[k];
+                            } catch (e) { /*  */ }
+                        } else {
+                            var hash = h.indexOf('#');
+                            if (hash < 0) continue;
+                            try {
+                                if (decodeURIComponent(h.slice(hash + 1)) === id) return links[k];
+                            } catch (e) { /*  */ }
+                        }
+                    }
+                    return null;
+                },
+                firstA = findTocAnchor(toc, titles[0] && titles[0].id);
+
+            if (firstA && firstA.parentNode) {
+                firstA.parentNode.classList.add('active');
+            }
 
             // Make every child shrink initially
             var tocChilds = toc.querySelectorAll('.post-toc-child');
             for (i = 0, len = tocChilds.length; i < len; i++) {
                 tocChilds[i].classList.add('post-toc-shrink');
             }
-            var firstChild =
-                toc.querySelector('a[href="#' + titles[0].id + '"]')
-                    .nextElementSibling;
+            var firstChild = firstA ? firstA.nextElementSibling : null;
             if (firstChild) {
                 firstChild.classList.add('post-toc-expand');
                 firstChild.classList.remove('post-toc-shrink');
@@ -154,18 +186,23 @@
                 actived: function (top) {
                     for (i = 0, len = titles.length; i < len; i++) {
                         if (top > offset(titles[i]).y - headerH - 5) {
-                            var prevListEle = toc.querySelector('li.active');
-                            var currListEle = toc.querySelector('a[href="#' + titles[i].id + '"]').parentNode;
-
-                            handleTocActive(prevListEle, currListEle);
+                            var prevLE = toc.querySelector('li.active');
+                            var cA = findTocAnchor(toc, titles[i].id);
+                            if (!cA || !cA.parentNode) continue;
+                            if (prevLE) {
+                                handleTocActive(prevLE, cA.parentNode);
+                            } else {
+                                cA.parentNode.classList.add('active');
+                            }
                         }
                     }
 
                     if (top < offset(titles[0]).y) {
-                        handleTocActive(
-                            toc.querySelector('li.active'),
-                            toc.querySelector('a[href="#' + titles[0].id + '"]').parentNode
-                        );
+                        var backA = findTocAnchor(toc, titles[0].id);
+                        var actPrev = toc.querySelector('li.active');
+                        if (backA && backA.parentNode && actPrev) {
+                            handleTocActive(actPrev, backA.parentNode);
+                        }
                     }
                 }
             }

@@ -5,6 +5,10 @@ hexo.extend.helper.register('theme_version', () => version)
 const source = (path, cache, ext) => {
     if (cache) {
         const minFile = `${path}${ext === '.js' ? '.min' : ''}${ext}`
+        // 主题 JS 始终用本地，否则 cdn 开启时从 unpkg 拉 npm 包，主题内对 main.js 的修改不生效
+        if (ext === '.js') {
+            return `${minFile}?v=${version}`
+        }
         return hexo.theme.config.cdn ? minFile === '/css/style.css' ? `${minFile}?v=${version}` : `//unpkg.com/${name}@latest${minFile}` : `${minFile}?v=${version}`
     } else {
         return path + ext
