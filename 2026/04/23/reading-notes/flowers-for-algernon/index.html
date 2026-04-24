@@ -324,6 +324,13 @@
   
 
   
+    <div class="waves-block waves-effect next">
+      <a href="/2026/04/23/reading-notes/hyperion/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">《海伯利安》读书总结：七个朝圣者，七种关于时间与牺牲的诘问</h4>
+      </a>
+    </div>
+  
 </nav>
 
 
@@ -345,6 +352,30 @@
 
 
 
+
+<section class="comments" id="comments">
+    <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+        var id = location.pathname
+        if (location.pathname.length > 50) {
+          id = location.pathname.replace(/\/\d+\/\d+\/\d+\//, '').replace('/', '').substring(0, 50)
+        }
+        const gitalk = new Gitalk({
+          clientID: 'Ov23lifVDBlsggvDtCXD',
+          clientSecret: 'a707e4bfbaeae6c99e4aec62b8708c8fef299fa8',
+          repo: 'tang-yue.github.io',
+          owner: 'tang-yue',
+          admin: ['tang-yue'],
+          id: id,      // Ensure uniqueness and length less than 50
+          title: document.title.split('|')[0],
+          distractionFreeMode: false  // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    </script>
+</section>
 
 
 
