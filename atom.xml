@@ -18,8 +18,8 @@
   
   <entry>
     <title>《克莱因壶》读后感：虚拟、真实与无法逃离的「壶」</title>
-    <link href="https://tang-yue.github.io/2026/04/24/klein-bottle/"/>
-    <id>https://tang-yue.github.io/2026/04/24/klein-bottle/</id>
+    <link href="https://tang-yue.github.io/2026/04/24/reading-notes/klein-bottle/"/>
+    <id>https://tang-yue.github.io/2026/04/24/reading-notes/klein-bottle/</id>
     <published>2026-04-24T02:57:51.437Z</published>
     <updated>2026-04-24T08:58:52.653Z</updated>
     
@@ -39,6 +39,8 @@
     <category term="读书笔记" scheme="https://tang-yue.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
+    <category term="哲学" scheme="https://tang-yue.github.io/tags/%E5%93%B2%E5%AD%A6/"/>
+    
     <category term="推理小说" scheme="https://tang-yue.github.io/tags/%E6%8E%A8%E7%90%86%E5%B0%8F%E8%AF%B4/"/>
     
     <category term="科幻惊悚" scheme="https://tang-yue.github.io/tags/%E7%A7%91%E5%B9%BB%E6%83%8A%E6%82%9A/"/>
@@ -53,14 +55,12 @@
     
     <category term="日本文学" scheme="https://tang-yue.github.io/tags/%E6%97%A5%E6%9C%AC%E6%96%87%E5%AD%A6/"/>
     
-    <category term="哲学" scheme="https://tang-yue.github.io/tags/%E5%93%B2%E5%AD%A6/"/>
-    
   </entry>
   
   <entry>
     <title>《献给阿尔吉侬的花束》读书总结</title>
-    <link href="https://tang-yue.github.io/2026/04/23/flowers-for-algernon/"/>
-    <id>https://tang-yue.github.io/2026/04/23/flowers-for-algernon/</id>
+    <link href="https://tang-yue.github.io/2026/04/23/reading-notes/flowers-for-algernon/"/>
+    <id>https://tang-yue.github.io/2026/04/23/reading-notes/flowers-for-algernon/</id>
     <published>2026-04-22T16:00:00.000Z</published>
     <updated>2026-04-24T09:33:53.089Z</updated>
     
@@ -78,11 +78,11 @@
     <category term="读书笔记" scheme="https://tang-yue.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="哲学" scheme="https://tang-yue.github.io/tags/%E5%93%B2%E5%AD%A6/"/>
-    
     <category term="读书" scheme="https://tang-yue.github.io/tags/%E8%AF%BB%E4%B9%A6/"/>
     
     <category term="科幻" scheme="https://tang-yue.github.io/tags/%E7%A7%91%E5%B9%BB/"/>
+    
+    <category term="哲学" scheme="https://tang-yue.github.io/tags/%E5%93%B2%E5%AD%A6/"/>
     
     <category term="成长" scheme="https://tang-yue.github.io/tags/%E6%88%90%E9%95%BF/"/>
     
